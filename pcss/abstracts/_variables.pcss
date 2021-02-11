@@ -19,14 +19,37 @@ $bp-large: 1024px;
   /* Secondary colors */
 
   --secondary__color: var(--red-color);
-  --secondary-90: #D00505;
+  --secondary-90: #d00505;
+
+  /* Alert colors */	
+  
+  --success__color: #32d08d;	
+  --error__color: #f14f39;	
+  --warning__color: #f1b239;
 
   /* Neutral colors */
-  --text__color: var(--neutral-color);
-  --color-white: #FFFFFF;
-  --success__color: #32D08D;
-  --error__color: #F14F39;
-  --warning__color: #F1B239;
+
+  --neutral-90: #696969;	
+  --neutral-60: #828282;	
+  --neutral-25: #9c9c9c;	
+  --neutral-10: #cfcfcf;	
+  --neutral-5: #e8e8e8;	
+  --color-white: #fff;	
+  --color-black: #000;	
+
+  /* Text Color */
+
+  --text__color: var(--neutral-90);
+  --text__color__invert: var(--color-white);	
+  --text__color__intense: #e4e4e4;	
+  --text__color__muted: var(--neutral-10);	
+
+  /* Link colors */	
+
+  --link__color: var(--secondary__color);	
+  --link__visited__color: #b9121d;	
+  --link__hover__color: #d41727;	
+  --link__active__color: #740d15;
 
   /* Components */
 
@@ -36,18 +59,18 @@ $bp-large: 1024px;
   --link__visited__color: var(--primary-10);
   --link__hover__color: var(--primary-20);
   --link__active__color: var(--primary-30);
-  
+
   /* Buttons */
 
   --button-primary__background: var(--primary__color);
   --button-primary__background--hover: var(--secondary__color);
-  --button-primary__background--disabled: var(--primary-20);
-  --button-secondary__background: var(--color-white);
-  --button-secondary__append: var(--secondary__color);
-  --button-secondary__border: var(--secondary__color);
-  --button-secondary__background--disabled: var(--primary-20);
-  --button-secondary__append--disabled: var(--primary-20);
-  --button-secondary__border--disabled: var(--primary-20);
+  --button-secondary__background__border: var(--secondary__color);
+  --button-secondary__background__color: var(--secondary__color);
+  --button-primary__background--disabled: var(--primary-20);	
+  --button-secondary__background: var(--color-white);		
+  --button-secondary__background--disabled: var(--color-white);	
+  --button-secondary__background__border--disabled: var(--primary-20);	
+  --button-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 
   /* Headings */
 

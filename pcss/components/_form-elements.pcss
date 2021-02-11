@@ -1,5 +1,7 @@
 select,
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   display: inline-block;
   width: 100%;
   height: pxtorem(36px);
@@ -7,17 +9,36 @@ input {
   appearance: none;
   border-width: pxtorem(1px);
   border-style: solid;
-  border-color: var(--theme__color__primary__lighter);
+  border-color: var(--neutral-25);
   @mixin ui-default-transition border-color;
 
   &:focus {
     outline: none;
-    border-color: var(--theme__color__primary);
+    border-color: var(--neutral-90);
   }
 
   @media (--large) {
-    height: pxtorem(42px);
+    height: pxtorem(48px);
   }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+input:invalid {
+  border: 1px solid var(--secondary__color);
+}
+
+input:disabled {
+  color: var(--neutral-60);
+  background-color: var(--neutral-5);
+  border: 1px solid var(--neutral-60);
 }
 
 textarea {
