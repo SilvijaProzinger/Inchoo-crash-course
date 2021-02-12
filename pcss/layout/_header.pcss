@@ -3,18 +3,22 @@
 }
 
 .header__buttons {
-    color: white;
+    color: var(--color-white);
     padding: 20px;
+    padding-left: pxtorem(10);
+    padding-right: pxtorem(10);
 }
 
 .header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: pxtorem(21);
+    padding-bottom: pxtorem(21);
 }
 
-.header__drawers-list {
-    display: flex;
+.header__drawers-list__item {
+    display: inline-block;
 }
 
 .logo {

@@ -10,3 +10,9 @@
 .visualy-hidden {
   @mixin no-display;
 } 
+
+.visualy-hidden--desktop {
+  @media (--large) {
+    @mixin no-display;
+  }
+}
