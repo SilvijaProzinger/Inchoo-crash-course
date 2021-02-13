@@ -23,11 +23,11 @@
 <body>
     <header class="header">
         <div class="container header__content">
-            <h1 class="logo">
+            <h2 class="logo">
                 <a href="./index.html" class="logo__link">
                     <img src="./assets/img/grabsbee.svg" alt="Grabsee Webshop logo" class="logo__img">
                 </a>
-            </h1>
+            </h2>
 
             <ul class="header__drawers-list">
                 <li class="header__drawers-list__item">
@@ -245,201 +245,213 @@
         </div>
     </header>
 
-    <main>
-        <ul>
-            <li><a href="#" title="Grabsee Home">Home</a></li>
-            <li><a href="#" title="Grabsee Main Category">Freesbe</a></li>
-            <li tabindex="0">Ultimate Frisbee</li>
-        </ul>
+    <div class="container categories__content">
+        <main>
+            <ul class="breadcrumb" aria-label="breadcrumb">
+                <li class="breadcrumb__item" aria-label="breadcrumb">
+                    <a class="breadcrumb__link" href="#" title="Grabsee Home">Home</a>
+                </li>
+                <li class="breadcrumb__item" aria-label="breadcrumb">
+                    <a class="breadcrumb__link" href="#" title="Grabsee Main Category">Freesbe</a>
+                </li>
+                <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0">Ultimate Frisbee</li>
+            </ul>
 
-        <h1>Ultimate Frisbee Category</h1>
+            <h1>Ultimate Frisbee Category</h1>
 
-        <section>
-            <button class="button button--secondary">Shop by <span class="icon-plus-circle"></span></button>
+            <section>
+                <button class="button button--secondary">Shop by <span class="icon-plus-circle"></span></button>
 
-            <div>
-                <ul>
+                <div>
+                    <ul>
+                        <li>
+                            <button class="button button--secondary" title="Grid View">
+                                <span class="icon-grid"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button button--secondary" title="List View">
+                                <span class="icon-list"></span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <label for="sort-by">Sort products by:</label>
+                        <select type="select" name="sort-by" id="sort-by">
+                            <option value="best-selers">Best selers</option>
+                            <option value="price">Price</option>
+                        </select>
+                        <button class="" title="Set direction"><span class="icon-arrow-down"></span></button>
+                    </div>
+                </div>
+
+                <ul id="grid-and-list" class="">
                     <li>
-                        <button class="button button--secondary" title="Grid View">
-                            <span class="icon-grid"></span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="button button--secondary" title="List View">
-                            <span class="icon-list"></span>
-                        </button>
+                        <picture>
+                            <img src="" alt="Product image">
+                        </picture>
+
+                        <h2><a href="/layout-product-page.html">Innova Pulsar</a></h2>
+                        <div class="rating rating__summary">
+                            <div class=""></div>
+                            <p class="">(#)</p>
+                        </div>
+
+                        <p class="price">As low as <strong>$21.99</strong></p>
+
+                        <form action="">
+                            <input type="hidden" name="product" value="">
+                            <button type="submit" class="">Add to Cart</button>
+                        </form>
+
+                        <ul>
+                            <li>
+                                <a href="" title="Add to wishlist"><span class="icon-heart"></span> Add to Wishlist</a>
+                            </li>
+                            <li>
+                                <a href="" title="Add to Compare"><span class="icon-bar-chart"></span> Add to Compare</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
 
                 <div>
-                    <label for="sort-by">Sort products by:</label>
-                    <select type="select" name="sort-by" id="sort-by">
-                        <option value="best-selers">Best selers</option>
-                        <option value="price">Price</option>
-                    </select>
-                    <button class="" title="Set direction"><span class="icon-arrow-down"></span></button>
-                </div>
-            </div>
+                    <ul class="pagination pagination__list">
+                        <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
+                        <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
+                    </ul>
 
-            <ul id="grid-and-list" class="">
-                <li>
-                    <picture>
-                        <img src="" alt="Product image">
-                    </picture>
-
-                    <h2><a href="layout-product-page.html">Innova Pulsar</a></h2>
-                    <div class="rating rating__summary">
-                        <div class=""></div>
-                        <p class="">(#)</p>
+                    <div class="limiter">
+                        <label for="limiter">Show</label>
+                        <select name="limiter" id="limiter">
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                            <option value="99">99</option>
+                        </select>
                     </div>
+                </div>
+            </section>
+        </main>
 
-                    <p class="price">As low as <strong>$21.99</strong></p>
+        <aside class="layered-nav">
+            <h2>Shopping options</h2>
+            <button class="button--no-styles header__buttons">
+                <span>Close</span>
+                <span class="icon-x-circle"></span>
+            </button>
 
-                    <form action="">
-                        <input type="hidden" name="product" value="">
-                        <button type="submit" class="">Add to Cart</button>
-                    </form>
-
+            <dl class="layered-nav__list">
+                <dt>Color</dt>
+                <dd>
                     <ul>
                         <li>
-                            <a href="" title="Add to wishlist"><span class="icon-heart"></span> Add to Wishlist</a>
+                            <a href="">Orange</a>
                         </li>
                         <li>
-                            <a href="" title="Add to Compare"><span class="icon-bar-chart"></span> Add to Compare</a>
+                            <a href="">Black</a>
+                        </li>
+                        <li>
+                            <a href="">Blue</a>
                         </li>
                     </ul>
-                </li>
-            </ul>
+                </dd>
+                <dt>Size</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <input class="" type="checkbox" id="size_s" name="size_s">
+                            <label for="size_s">S</label>
+                        </li>
+                        <li>
+                            <input class="" type="checkbox" id="size_m" name="size_m">
+                            <label for="size_m">M</label>
+                        </li>
+                        <li>
+                            <input class="" type="checkbox" id="size_l" name="size_l">
+                            <label for="size_l">L</label>
+                        </li>
+                    </ul>
+                </dd>
+                <dt>Material</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <input class="" type="checkbox" id="material_pvc" name="material_pvc">
+                            <label for="material_pvc">Strong PVC</label>
+                        </li>
+                        <li>
+                            <input class="" type="checkbox" id="material_composit" name="material_composit">
+                            <label for="material_composit">Carbon</label>
+                        </li>
+                    </ul>
+                </dd>
+                <dt>Price</dt>
+                <dd>
+                    <input type="range" id="price_range" name="price_range">
+                    <label for="price_range">Select price range</label>
+                </dd>
+            </dl>
+        </aside>
+    </div>
 
-            <div>
-                <ul class="pagination pagination__list">
-                    <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
-                    <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
-                    <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
-                </ul>
+    <footer class="footer">
+        <section class="newsletter__content">
+            <div class="container">
+                <h2 class="footer__title">Newsletter</h2>
+                <p tabindex="0">Sign up for our newsletter and be the first to find out about new products, discounts and more.</p>
 
-                <div class="limiter">
-                    <label for="limiter">Show</label>
-                    <select name="limiter" id="limiter">
-                        <option value="8">8</option>
-                        <option value="16">16</option>
-                        <option value="99">99</option>
-                    </select>
-                </div>
+                <form action="">
+                    <fieldset>
+                        <legend class="visualy-hidden">Grabsee Newsletter Form</legend> 
+                        <label class="visualy-hidden" for="newsletter" tabindex="0">Enter your email in order to become the Grabsee subscriber</label>
+                        <input placeholder="Enter your email address" name="newsletter" type="email">
+                        <button class="button button--primary" type="submit">Subscibe</button>
+                    </fieldset>
+                </form>
             </div>
         </section>
-    </main>
 
-    <aside class="layered-nav">
-        <h2>Shopping options</h2>
-        <button class="button--no-styles header__buttons">
-            <span>Close</span>
-            <span class="icon-x-circle"></span>
-        </button>
+        <section class="summary__content">
+            <div class="container">
+                <details class="footer__details" open>
+                    <summary class="footer__summary">
+                        <h2 class="footer__title footer__summary-title">Categories</h2>
+                    </summary>
 
-        <dl class="layered-nav__list">
-            <dt>Color</dt>
-            <dd>
-                <ul>
-                    <li>
-                        <a href="">Orange</a>
-                    </li>
-                    <li>
-                        <a href="">Black</a>
-                    </li>
-                    <li>
-                        <a href="">Blue</a>
-                    </li>
-                </ul>
-            </dd>
-            <dt>Size</dt>
-            <dd>
-                <ul>
-                    <li>
-                        <input class="" type="checkbox" id="size_s" name="size_s">
-                        <label for="size_s">S</label>
-                    </li>
-                    <li>
-                        <input class="" type="checkbox" id="size_m" name="size_m">
-                        <label for="size_m">M</label>
-                    </li>
-                    <li>
-                        <input class="" type="checkbox" id="size_l" name="size_l">
-                        <label for="size_l">L</label>
-                    </li>
-                </ul>
-            </dd>
-            <dt>Material</dt>
-            <dd>
-                <ul>
-                    <li>
-                        <input class="" type="checkbox" id="material_pvc" name="material_pvc">
-                        <label for="material_pvc">Strong PVC</label>
-                    </li>
-                    <li>
-                        <input class="" type="checkbox" id="material_composit" name="material_composit">
-                        <label for="material_composit">Carbon</label>
-                    </li>
-                </ul>
-            </dd>
-            <dt>Price</dt>
-            <dd>
-                <input type="range" id="price_range" name="price_range">
-                <label for="price_range">Select price range</label>
-            </dd>
-        </dl>
-    </aside>
+                    <ul class="">
+                        <li>
+                            <a class="summary__links" href="">Frisbee</a>
+                        </li>
+                        <li>
+                            <a class="summary__links" href="">Gear</a>
+                        </li>
+                        <li>
+                            <a class="summary__links" href="">Accessories</a>
+                        </li>
+                        <li>
+                            <a class="summary__links" href="">Gifts</a>
+                        </li>
+                    </ul>
+                </details>
 
-    <footer>
-        <section class="container newsletter__content">
-            <h2>Newsletter</h2>
-            <p tabindex="0">Sign up for our newsletter and be the first to find out about new products, discounts and more.</p>
+                <details class="footer__details">
+                    <summary class="footer__summary">
+                        <h2 class="footer__title footer__summary-title">Contact us</h2>
+                    </summary>
 
-            <form action="">
-                <fieldset>
-                    <legend>Grabsee Newsletter Form</legend> 
-                    <label for="newsletter" tabindex="0">Enter your email in order to become the Grabsee subscriber</label>
-
-                    <input placeholder="Enter your email address" name="newsletter" type="email">
-                    <button class="button button--primary">Subscribe</button>
-                </fieldset>
-            </form>
+                    <ul>
+                        <li tabindex="0"><address>Trg Slobode 6</address></li>
+                        <li><a class="summary__links" href="tel:+385958811630">+385 95 8811630</a></li>
+                        <li><a class="summary__links" href="mailto:filip.svetlicic@gmail.com">filip.svetlicic@gmail.com</a></li>
+                    </ul>
+                </details>
+            </div>
         </section>
 
-        <section class="container summary__content">
-            <details open>
-                <summary><h2>Categories</h2></summary>
-
-                <ul class="">
-                    <li>
-                        <a class="" href="">Frisbee</a>
-                    </li>
-                    <li>
-                        <a class="" href="">Gear</a>
-                    </li>
-                    <li>
-                        <a class="" href="">Accessories</a>
-                    </li>
-                    <li>
-                        <a class="" href="">Gifts</a>
-                    </li>
-                </ul>
-            </details>
-
-            <details>
-                <summary><h2>Contact us</h2></summary>
-
-                <ul>
-                    <li tabindex="0"><address>Trg Slobode 6</address></li>
-                    <li><a class="" href="tel:+385958811630">+385 95 8811630</a></li>
-                    <li><a class="" href="mailto:filip.svetlicic@gmail.com">filip.svetlicic@gmail.com</a></li>
-                </ul>
-            </details>
-
-        </section>
-
-        <div class="container">
-            <small tabindex="0">Copyright &reg; 2021 Grabsbee</small>
+        <div class="container copyright">
+            <small class="copyright__text" tabindex="0">Copyright &reg; 2021 Grabsbee</small>
         </div>
     </footer>
 </body>
