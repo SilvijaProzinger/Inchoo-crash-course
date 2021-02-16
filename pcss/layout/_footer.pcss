@@ -10,6 +10,13 @@
 
    @media (--large) {
     font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+
+.footer input {
+  @media (--large) and (--medium) {
+    width: 364px;
   }
 }
 
@@ -19,6 +26,17 @@
   text-align: center;
   padding-top: pxtorem(21);
   padding-bottom: pxtorem(21);
+
+  @media (--large) {
+    padding: 3.95rem 0 3.95rem 0;
+  }
+}
+
+.newsletter__content p {
+
+  @media (--large) {
+    margin: 0;
+  }
 }
 
 .footer__summary {
@@ -55,9 +73,15 @@
 .footer__button {
   font-size: 14px;
   margin-top: 1.7em;
-  width: 100%;
   border: none;
-  text-align: center;
+  width: 100%;
+  display: block;
+
+  @media (--large) and (--medium) {
+    padding: 0 1.5rem 0 1.5rem;
+    width: 130px;
+    display: inline;
+  }
 }
 
 .copyright {
