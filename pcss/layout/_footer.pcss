@@ -8,15 +8,15 @@
   font-size: 12px;
   font-family: var(--body__type);
 
-   @media (--large) {
+   @media (--medium) {
     font-size: 14px;
     margin-bottom: 0;
   }
 }
 
 .footer input {
-  @media (--large) and (--medium) {
-    width: 364px;
+  @media (--medium) {
+    width: 320px;
   }
 }
 
@@ -27,14 +27,14 @@
   padding-top: pxtorem(21);
   padding-bottom: pxtorem(21);
 
-  @media (--large) {
+  @media (--medium) {
     padding: 3.95rem 0 3.95rem 0;
   }
 }
 
 .newsletter__content p {
 
-  @media (--large) {
+  @media (--medium) {
     margin: 0;
   }
 }
@@ -77,10 +77,14 @@
   width: 100%;
   display: block;
 
-  @media (--large) and (--medium) {
+  @media (--medium) {
     padding: 0 1.5rem 0 1.5rem;
     width: 130px;
     display: inline;
+  }
+
+  @media (--large) {
+    padding: 0;
   }
 }
 
