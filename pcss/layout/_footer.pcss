@@ -49,6 +49,19 @@
 
 .footer__summary-title {
   line-height: 2;
+
+  @media (--medium) {
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.footer__details {
+  padding-bottom: 1rem;
+
+  @media (--medium) {
+    padding-bottom: 0;
+  }
 }
 
 .summary__content {
@@ -60,6 +73,25 @@
   text-decoration: none;
   color: var(--text__color__invert);
   font-weight: normal;
+}
+
+.summary__container {
+  @media (--medium) {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding-bottom: 2rem
+  }
+}
+
+.summary__links__link {
+  display: flex;
+  align-items: center;
+}
+
+.summary__links__prepend__img {
+  padding-right: 0.5rem;
 }
 
 .copyright__text {
