@@ -4,7 +4,6 @@
 
 .header__buttons {
     color: var(--color-white);
-    //padding: 20px;
     padding-left: pxtorem(10);
     padding-right: pxtorem(10);
 }
@@ -15,7 +14,18 @@
     align-items: center;
     padding-top: pxtorem(21);
     padding-bottom: pxtorem(21);
+
+    @media (--large) {
+        padding-top: pxtorem(26);
+        padding-bottom: pxtorem(26);
+    }
 }
+
+.header__drawers-list {
+    @media (--large) {
+        padding-right: pxtorem(39.75);
+    }
+}   
 
 .header__drawers-list__item {
     display: inline-block;
@@ -23,4 +33,15 @@
 
 .logo {
     margin-bottom: 0;
+    
+    @media (--large) {
+        margin-left: pxtorem(102);
+    }
+}
+
+.logo__img {
+
+    @media (--large) {
+        width: 196px;
+    }
 }

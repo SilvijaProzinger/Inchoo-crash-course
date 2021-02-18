@@ -31,8 +31,10 @@
 }
 
 .hero-slider-list__title {
-  color: white;
+  color: var(--text__color__invert);	
   text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: pxtorem(41);
 }
 
 .hero-slider-list__banner {
@@ -46,4 +48,8 @@
   @media (--large) {
     @mixin aspect-ratio-calc-old 624, 1600;
   }
+}
+
+.button--hero-slider {
+  border: none;
 }
