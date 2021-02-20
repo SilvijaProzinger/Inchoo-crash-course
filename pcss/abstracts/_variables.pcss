@@ -2,9 +2,11 @@ $container-width: 1600px;
 $container-gutter: 8px;
 $bp-large: 1024px;
 $bp-medium: 765px;
+$bp-largest: 1380px;
 
 @custom-media --large (min-width: $bp-large);
 @custom-media --medium (min-width: $bp-medium);
+@custom-media --largest (min-width: $bp-largest);
 
 :root {
   --blue-color: #12167a;
@@ -54,13 +56,6 @@ $bp-medium: 765px;
   --link__active__color: #740d15;
 
   /* Components */
-
-  /* Links */
-
-  --link__color: var(--primary__color);
-  --link__visited__color: var(--primary-10);
-  --link__hover__color: var(--primary-20);
-  --link__active__color: var(--primary-30);
 
   /* Buttons */
 

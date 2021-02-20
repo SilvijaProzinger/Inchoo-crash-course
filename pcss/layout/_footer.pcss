@@ -7,6 +7,7 @@
   @mixin section-title;
   font-size: 12px;
   font-family: var(--body__type);
+  margin-bottom: 0;
 
    @media (--medium) {
     font-size: 14px;
@@ -45,11 +46,16 @@
 
   &:before {
     @mixin icon-font-display "\e909";
+    float: right;
+    margin-top: pxtorem(19.67);
+
+    @media (--medium) {
+      content: '';
+    }
   }
 }
 
 .footer__summary-title {
-  line-height: 2;
 
   @media (--medium) {
     margin-top: pxtorem(24);
@@ -123,4 +129,8 @@
 
 .copyright {
   background-color: var(--color-black);
+}
+
+.container.copyright {
+  max-width: 100%;
 }

@@ -64,8 +64,16 @@
     --auto-grid-min-size: 16rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: pxtorem(26);
+    align-items: center;
+    justify-items: center;
+    grid-gap: pxtorem(21);
   }
+
+  @media (--largest){
+    display: flex;
+    justify-content: center;
+  }
+
 
 }
 
