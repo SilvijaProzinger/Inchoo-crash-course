@@ -55,11 +55,18 @@
 }
 
 .categories__list {
-  @media (--large){
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  /* fallback for browsers that don't support grid */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @supports(display:grid) {
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: pxtorem(26);
   }
+
 }
 
 .categories__title {
