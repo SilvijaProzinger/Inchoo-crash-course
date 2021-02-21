@@ -281,21 +281,33 @@
         <main>
             <ul class="breadcrumb" aria-label="breadcrumb">
                 <li class="breadcrumb__item" aria-label="breadcrumb">
-                    <a class="breadcrumb__link" href="#" title="Grabsee Home">Home</a>
+                    <a class="breadcrumb__link" href="./index.html" title="Grabsee Home">Home</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <picture>
+                    <source /> 
+                    <img src="" class="icon-chevron-right" alt=""/>
+                  </picture>
                 </li>
                 <li class="breadcrumb__item" aria-label="breadcrumb">
                     <a class="breadcrumb__link" href="#" title="Grabsee Main Category">Frisbee</a>
                 </li>
-                <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0">Ultimate Frisbee</li>
+                <li class="breadcrumb__item">
+                  <picture>
+                    <source />
+                    <img src="" class="icon-chevron-right" alt=""/>
+                  </picture>
+                </li>
+                <li class="breadcrumb__item breadcrumb__current__item" aria-label="breadcrumb" aria-current="location" tabindex="0">Ultimate Frisbee</li>
             </ul>
 
-            <h1>Ultimate Frisbee</h1>
+            <h1 class="category__title">Ultimate Frisbee</h1>
 
             <section>
                 <button class="button button--secondary">Shop by <span class="icon-plus-circle"></span></button>
 
-                <div>
-                    <ul>
+                <div class="view__sort__options">
+                    <ul class="grid__list__buttons">
                         <li>
                             <button class="button button--secondary" title="Grid View">
                                 <span class="icon-grid"></span>
@@ -308,13 +320,13 @@
                         </li>
                     </ul>
 
-                    <div>
-                        <label for="sort-by">Sort products by:</label>
-                        <select type="select" name="sort-by" id="sort-by">
-                            <option value="best-selers">Best selers</option>
+                    <div class="sort">
+                        <label for="sort-by">Sort by:</label>
+                        <select type="select" name="sort-by" id="sort-by" class="sort__selection">
+                            <option value="best-selers">Bestseller</option>
                             <option value="price">Price</option>
                         </select>
-                        <button class="" title="Set direction"><span class="icon-arrow-down"></span></button>
+                        <button class="sort__button" title="Set direction"><span class="icon-arrow-down"></span></button>
                     </div>
                 </div>
 
@@ -368,28 +380,31 @@
         </main>
 
         <aside class="layered-nav">
-            <h2>Shopping options</h2>
+            <h3 class="bold-uppercase layered-nav__title">Shopping options</h3>
             <button class="button--no-styles header__buttons">
                 <span>Close</span>
                 <span class="icon-x-circle"></span>
             </button>
 
             <dl class="layered-nav__list">
-                <dt>Color</dt>
+                <dt class="label-level-0">Color</dt>
                 <dd>
                     <ul>
+                        <li>
+                          <a href="">Black</a>
+                        </li>
                         <li>
                             <a href="">Orange</a>
                         </li>
                         <li>
-                            <a href="">Black</a>
-                        </li>
-                        <li>
                             <a href="">Blue</a>
                         </li>
+                        <li>
+                          <a href="">White</a>
+                      </li>
                     </ul>
                 </dd>
-                <dt>Size</dt>
+                <dt class="label-level-0">Size</dt>
                 <dd>
                     <ul>
                         <li>
@@ -406,7 +421,7 @@
                         </li>
                     </ul>
                 </dd>
-                <dt>Material</dt>
+                <dt class="label-level-0">Material</dt>
                 <dd>
                     <ul>
                         <li>
@@ -419,7 +434,7 @@
                         </li>
                     </ul>
                 </dd>
-                <dt>Price</dt>
+                <dt class="label-level-0">Price</dt>
                 <dd>
                     <input type="range" id="price_range" name="price_range">
                     <label for="price_range">Select price range</label>
@@ -470,20 +485,20 @@
                     <span class="summary__links__prepend">
                       <img src="./assets/img/location-icon.svg" alt="" class="summary__links__prepend__img">
                     </span>
-                    <span>Trg Slobode 6</span>
+                    Trg Slobode 6
                   </address>
                 </li>
                 <li class="summary__links__link">
                   <span class="summary__links__prepend">
                     <img src="./assets/img/phone-icon.svg" alt="" class="summary__links__prepend__img">
                   </span>
-                  <span><a class="summary__links" href="tel:+385958811630">+385 95 8811630</a></span>
+                  <a class="summary__links" href="tel:+385958811630">+385 95 8811630</a>
                 </li>
                 <li class="summary__links__link">
                   <span class="summary__links__prepend">
                     <img src="./assets/img/email-icon.svg" alt="" class="summary__links__prepend__img">
                   </span>
-                  <span><a class="summary__links" href="mailto:filip.svetlicic@gmail.com">filip.svetlicic@gmail.com</a></span>
+                  <a class="summary__links" href="mailto:filip.svetlicic@gmail.com">filip.svetlicic@gmail.com</a>
                 </li>
               </ul>
             </details>

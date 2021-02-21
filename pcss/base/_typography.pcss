@@ -90,7 +90,23 @@ p {
   }
 }
 
+.bold-uppercase {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.label-level-0 {
+  font-family: var(--headings__type);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
 a {
+  text-decoration: none;
   @mixin ui-default-transition color;
 
   &:hover {

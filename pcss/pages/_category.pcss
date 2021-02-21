@@ -1,5 +1,6 @@
 .breadcrumb__link {
     color: var( --link__color);
+    margin-right: pxtorem(6);
 
     &:hover {
         color: var(--link__hover__color);
@@ -16,4 +17,53 @@
 
 .breadcrumb {
     display: flex;
+    margin-top: pxtorem(21);
+    margin-bottom: pxtorem(23);
+}
+
+.breadcrumb__current__item {
+    font-weight: 700;
+}
+
+.category__title {
+    border-bottom: 1px solid var(--text__color__muted);
+    margin-bottom: pxtorem(19);
+}
+
+.icon-plus-circle {
+    margin-left: pxtorem(6.58);
+}
+
+.grid__list__buttons {
+    display: flex;
+}
+
+.view__sort__options {
+    margin-top: pxtorem(22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: pxtorem(20);
+}
+
+.sort {
+    display: flex;
+}
+
+.sort label {
+    display: none;
+
+    @media (--medium) {
+        display: inline;
+    }
+}
+
+.sort__button {
+    margin-left: pxtorem(8.33);
+}
+
+.layered-nav__title {
+    color: var(--primary__color);
+    margin-top: pxtorem(25);
+    margin-bottom: pxtorem(23);
 }
