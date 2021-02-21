@@ -30,6 +30,12 @@
     margin-bottom: pxtorem(19);
 }
 
+.button--shop_by {
+    @media (--large) {
+        display: none;
+    }
+}
+
 .icon-plus-circle {
     margin-left: pxtorem(6.58);
 }
@@ -63,6 +69,8 @@
 }
 
 .layered-nav {
+    width: 329px;
+
     @media (--large) {
         float: left;
         width: 20%;
@@ -87,8 +95,8 @@
 }
 
 .option__button {
-    position: absolute;
-    right: pxtorem(6.83);
+    margin-left: auto;
+    display: block;
 }
 
 .categories__container {
@@ -104,4 +112,61 @@
 
 footer {
     clear: both; 
+}
+
+.button__grid, .button__list {
+    &:active, &:focused {
+        background-color: var(--button-primary__background);
+        color: var(--color-white);
+    }
+
+}
+
+.pagination__list {
+    display: flex;
+    margin-top: pxtorem(20);
+    margin-bottom: pxtorem(22);
+}
+
+.pagination__show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination__link {
+    padding-left: pxtorem(17);
+    padding-right: pxtorem(17);
+    padding-top: pxtorem(9);
+    padding-bottom: pxtorem(9);
+    margin-right: pxtorem(3);
+    background-color: var(--neutral-10);
+    color: var(--text__color);
+
+    &:active, &:first-child {
+        background-color: var(--button-secondary__background__color);
+        color: var(--color-white);
+    }
+
+    &:visited {
+        color: var(--text__color);
+    }
+}
+
+.limiter {
+    display: flex;
+    align-items: center;
+}
+
+.limiter label {
+    margin-right: pxtorem(6);
+}
+
+.product__item {
+    border: 1px solid var(--neutral-10);
+    padding: pxtorem(20);
+}
+
+.product__name {
+    color: var(--link__color);
 }

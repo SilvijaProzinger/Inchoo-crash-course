@@ -304,17 +304,17 @@
             <h1 class="category__title">Ultimate Frisbee</h1>
 
             <section class="categories__main">
-                <button class="button button--secondary">Shop by <span class="icon-plus-circle"></span></button>
+                <button class="button button--secondary button--shop_by">Shop by <span class="icon-plus-circle"></span></button>
 
                 <div class="view__sort__options">
                     <ul class="grid__list__buttons">
                         <li>
-                            <button class="button button--secondary" title="Grid View">
+                            <button class="button button--secondary button__grid" title="Grid View">
                                 <span class="icon-grid"></span>
                             </button>
                         </li>
                         <li>
-                            <button class="button button--secondary" title="List View">
+                            <button class="button button--secondary button__list" title="List View">
                                 <span class="icon-list"></span>
                             </button>
                         </li>
@@ -331,12 +331,12 @@
                 </div>
 
                 <ul id="grid-and-list" class="">
-                    <li>
+                    <li class="product__item">
                         <picture>
-                            <img src="" alt="Product image">
+                            <img src="./assets/img/products/product-1.svg" alt="Innova Pulsar Major League Ultimate Championship 175 Gram Flying Disc Ultrastar">
                         </picture>
 
-                        <h2><a href="/layout-product-page.html">Innova Pulsar</a></h2>
+                        <h2 class="product__name"><a href="/layout-product-page.html">Innova Pulsar</a></h2>
                         <div class="rating rating__summary">
                             <div class=""></div>
                             <p class="">(#)</p>
@@ -360,11 +360,12 @@
                     </li>
                 </ul>
 
-                <div>
+                <div class="pagination__show">
                     <ul class="pagination pagination__list">
                         <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
                         <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
                         <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href=""><span class="icon-arrow-right"></span></a></li>
                     </ul>
 
                     <div class="limiter">
