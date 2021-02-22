@@ -115,6 +115,11 @@ footer {
 }
 
 .button__grid, .button__list {
+    padding-left: pxtorem(14.62);
+    padding-right: pxtorem(14.62);
+    padding-top: pxtorem(15.43);
+    padding-bottom: pxtorem(15.43);
+    
     &:active, &:focused {
         background-color: var(--button-primary__background);
         color: var(--color-white);
@@ -125,7 +130,7 @@ footer {
 .pagination__list {
     display: flex;
     margin-top: pxtorem(20);
-    margin-bottom: pxtorem(22);
+    margin-bottom: pxtorem(26);
 }
 
 .pagination__show {
@@ -143,7 +148,7 @@ footer {
     background-color: var(--neutral-10);
     color: var(--text__color);
 
-    &:active, &:first-child {
+    &:first-of-type {
         background-color: var(--button-secondary__background__color);
         color: var(--color-white);
     }
@@ -165,8 +170,50 @@ footer {
 .product__item {
     border: 1px solid var(--neutral-10);
     padding: pxtorem(20);
+    text-align: center;
+}
+
+.product__item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.product__item h2 {
+    margin-bottom: pxtorem(17);
 }
 
 .product__name {
     color: var(--link__color);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+.price {
+    color: var(--primary__color);
+}
+
+.rating__stars {
+    display: flex;
+    justify-content: center;
+}
+
+.rating__number {
+    color: var(--link__color);
+    font-size: 12px;
+}
+
+.wishlisht__and__compare {
+    display: flex;
+    justify-content: center;
+    margin-top: pxtorem(7.15);
+}
+
+.wishlist__item {
+    margin-right: pxtorem(8.08);
+}
+
+.compare__item {
+    margin-left: pxtorem(8.08);
 }
