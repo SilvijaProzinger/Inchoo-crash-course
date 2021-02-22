@@ -309,12 +309,12 @@
                 <div class="view__sort__options">
                     <ul class="grid__list__buttons">
                         <li>
-                            <button class="button button--secondary button__grid" title="Grid View">
+                            <button class="button button--secondary button__grid" id="trigger-grid" title="Grid View">
                                 <span class="icon-grid"></span>
                             </button>
                         </li>
                         <li>
-                            <button class="button button--secondary button__list" title="List View">
+                            <button class="button button--secondary button__list" id="trigger-list" title="List View">
                                 <span class="icon-list"></span>
                             </button>
                         </li>
@@ -330,7 +330,7 @@
                     </div>
                 </div>
 
-                <ul id="grid-and-list" class="products__list-view">
+                <ul id="grid-and-list" class="products__grid-view">
                     <li class="product__item">
                         <picture>
                             <img src="./assets/img/products/product-1.svg" alt="Innova Pulsar Major League Ultimate Championship 175 Gram Flying Disc Ultrastar">
@@ -368,7 +368,7 @@
                               <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                           </form>
                       </div>
-                      <ul class="wishlist__list">
+                      <ul class="wishlist__and__compare">
                         <li class="wishlist__item">
                             <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                         </li>
@@ -414,7 +414,7 @@
                             <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                         </form>
                       </div>
-                      <ul class="wishlist__list">
+                      <ul class="wishlist__and__compare">
                         <li class="wishlist__item">
                             <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                         </li>
@@ -460,7 +460,7 @@
                           <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                       </form>
                     </div>
-                    <ul class="wishlist__list">
+                    <ul class="wishlist__and__compare">
                       <li class="wishlist__item">
                           <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                       </li>
@@ -506,7 +506,7 @@
                         <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                     </form>
                   </div>
-                  <ul class="wishlist__list">
+                  <ul class="wishlist__and__compare">
                     <li class="wishlist__item">
                         <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                     </li>
@@ -698,5 +698,7 @@
           >
         </div>
       </footer>
+
+      <script src="./script/categories.js"></script>
 </body>
 </html>
