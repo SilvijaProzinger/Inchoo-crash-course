@@ -50,13 +50,14 @@ filterOption.forEach(option => {
     let selectedFilter;
 
     option.addEventListener('click', event => {
-        if (event.target.tagName == 'a') {
-            event.preventDefault()
-            console.log(event.target.innerText)
+        if (event.target.tagName == 'A') {
+            event.preventDefault() 
             selectedFilter = event.target.innerText
-        } else {
-            console.log(event.target.id)
+        } else if (event.target.checked){
             selectedFilter = event.target.id
+        } else {
+            selectedFilter = ''
+            document.getElementById('selected').style.display = 'none';
         }
         console.log(selectedFilter)
 
