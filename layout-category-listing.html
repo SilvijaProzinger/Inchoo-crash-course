@@ -304,7 +304,7 @@
             <h1 class="category__title">Ultimate Frisbee</h1>
 
             <section class="categories__main">
-                <button class="button button--secondary button--shop_by">Shop by <span class="icon-plus-circle"></span></button>
+                <button id="shop-by" class="button button--secondary button--shop_by" tabindex="0">Shop by <span class="icon-plus-circle"></span></button>
 
                 <div class="view__sort__options">
                     <ul class="grid__list__buttons">
@@ -368,7 +368,7 @@
                               <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                           </form>
                       </div>
-                      <ul class="wishlist__and__compare">
+                      <ul id ="wishlist-compare" class="wishlist__and__compare">
                         <li class="wishlist__item">
                             <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                         </li>
@@ -414,7 +414,7 @@
                             <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                         </form>
                       </div>
-                      <ul class="wishlist__and__compare">
+                      <ul id ="wishlist-compare" class="wishlist__and__compare">
                         <li class="wishlist__item">
                             <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                         </li>
@@ -460,7 +460,7 @@
                           <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                       </form>
                     </div>
-                    <ul class="wishlist__and__compare">
+                    <ul id ="wishlist-compare" class="wishlist__and__compare">
                       <li class="wishlist__item">
                           <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                       </li>
@@ -506,7 +506,7 @@
                         <button type="submit" class="button button--primary button__add-product">Add to Cart</button>
                     </form>
                   </div>
-                  <ul class="wishlist__and__compare">
+                  <ul id ="wishlist-compare" class="wishlist__and__compare">
                     <li class="wishlist__item">
                         <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
                     </li>
@@ -538,17 +538,16 @@
         </main>
 
         <aside class="layered-nav">
-            <h3 class="bold-uppercase layered-nav__title">Shopping options</h3>
-            <button class="button--no-styles header__buttons">
-                <span>Close</span>
-                <span class="icon-x-circle"></span>
-            </button>
-
-            <dl class="layered-nav__list">
-                <dt class="label-level-0">Color  
-                  <button class="option__button"><span class="icon-chevron-down"></span></button>
-                </dt>
-                <dd class="layered-nav__list__item">
+          <button id="close-shop-by" class="button--no-styles header__buttons button--close-nav">
+              <span>Close</span>
+              <span class="icon-x-circle"></span>
+          </button>
+          <h3 class="bold-uppercase layered-nav__title">Shopping options</h3>
+            <div class="layered-nav__list" id="layered-navigation">
+              <details>
+                <summary class="label-level-0">Color</summary>
+                <dl>
+                  <dd class="layered-nav__list__item">
                     <ul>
                         <li>
                           <a href="">Black</a>
@@ -564,10 +563,12 @@
                       </li>
                     </ul>
                 </dd>
-                <dt class="label-level-0">Size
-                  <button class="option__button"><span class="icon-chevron-down"></span></button>
-                </dt>
-                <dd class="layered-nav__list__item">
+                </dl>
+              </details>
+              <details>
+                <summary class="label-level-0">Size</summary>
+                <dl>
+                  <dd class="layered-nav__list__item">
                     <ul>
                         <li>
                             <input class="" type="checkbox" id="size_s" name="size_s">
@@ -583,10 +584,12 @@
                         </li>
                     </ul>
                 </dd>
-                <dt class="label-level-0">Material
-                  <button class="option__button"><span class="icon-chevron-down"></span></button>
-                </dt>
-                <dd class="layered-nav__list__item">
+                </dl>
+              </details>
+              <details>
+                <summary class="label-level-0">Material</summary>
+                <dl>
+                  <dd class="layered-nav__list__item">
                     <ul>
                         <li>
                             <input class="" type="checkbox" id="material_pvc" name="material_pvc">
@@ -598,14 +601,16 @@
                         </li>
                     </ul>
                 </dd>
-                <dt class="label-level-0">Price
-                  <button class="option__button"><span class="icon-chevron-down"></span></button>
-                </dt>
+                </dl>
+              </details>
+              <details>
+                <summary class="label-level-0">Price</summary>
                 <dd class="layered-nav__list__item">
                     <input type="range" id="price_range" name="price_range">
                     <label for="price_range">Select price range</label>
                 </dd>
-            </dl>
+              </details>
+            </div>
         </aside>
     </div>
 
