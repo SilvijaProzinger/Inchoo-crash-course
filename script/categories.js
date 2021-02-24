@@ -4,12 +4,27 @@ const categoriesView = document.getElementById('grid-and-list');
 
 const wishlistArray = document.querySelectorAll('#wishlist-compare');
 const shopByButton = document.getElementById('shop-by');
-const shopByNavigation = document.querySelector('.layered-nav');
+const shopByNavigation = document.getElementById('aside');
 const closeShopByButton = document.getElementById('close-shop-by');
 
 const filters = document.getElementById('layered-navigation');
 const filterOption = filters.querySelectorAll('a, input');
 const closeFiltersButton = document.getElementById('clear-button');
+
+//check window width to see if shopby filter should be opened or hidden for mobile view 
+const showOrHideSidebar = () => {
+    console.log(window.innerWidth)
+    if (window.innerWidth >= 1024){
+        shopByNavigation.classList.add('layered-nav');
+        shopByNavigation.classList.remove('layered-nav-mobile');
+    } else {
+        shopByNavigation.classList.add('layered-nav-mobile');
+        shopByNavigation.classList.remove('layered-nav');
+    }
+};
+
+window.addEventListener("resize", showOrHideSidebar);
+window.onload = showOrHideSidebar;
 
 //switch between grid and list view
 listButton.addEventListener('click', () => {
@@ -34,15 +49,13 @@ gridButton.addEventListener('click', () => {
 
 //open or close shop by filters
 shopByButton.addEventListener('click', () => {
-    shopByNavigation.style.display = 'block';
     shopByNavigation.classList.add('layered-nav-mobile');
-    shopByNavigation.classList.remove('layered-nav');
+    shopByNavigation.style.display = 'block';
 })
 
 closeShopByButton.addEventListener('click', () => {
-    shopByNavigation.style.display = 'none';
-    shopByNavigation.classList.add('layered-nav');
     shopByNavigation.classList.remove('layered-nav-mobile');
+    shopByNavigation.style.display = 'none';
 })
 
 //apply selected filters to categories
