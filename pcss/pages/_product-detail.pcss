@@ -110,6 +110,10 @@
     @media (--large) {
         margin-top: pxtorem(15);
         margin-bottom: pxtorem(25);
+        display: flex;
+        padding-right: pxtorem(20);
+        align-items: center;
+        align-self: center;
     }
 }
 
@@ -121,14 +125,36 @@
     @media (--large) {
         text-transform: none;
         font-size: 16px
+
     }
 }
 
 .product__details summary {
-
+    
     &:before {
         @mixin icon-font-display "\e909";
         float: right;
+
+        @media (--large) {
+            content: '';
+        }
+    }
+
+    @media (--large) {
+        margin-right: pxtorem(20);
+    }
+
+}
+
+.details__content {
+    @media (--large) {
+        position: absolute;
+    }
+}
+
+table {
+    @media (--large) {
+        max-width: calc(100% - 150px)
     }
 }
 

@@ -361,7 +361,7 @@
                         <fieldset class="item__fieldset">
                             <legend>Item qty</legend>
                             <label for="qty" aria-label="quantity" tabindex="0">Qty:</label>
-                            <input name="qty" type="number">
+                            <input name="qty" type="number" value="1">
                         </fieldset> 
                         <button class="button button--primary button--add-to-cart" type="submit" tabindex="0" aria-label="add to cart">Add to Cart</button>    
                     </div>
@@ -381,22 +381,22 @@
         </div> 
 
             <section class="product__details">
-                <details open>
-                    <summary>
+                <details open class="product__details__detail">
+                    <summary class="summary__desktop__tab">
                         <h2 aria-labeledby="details" aria-controls="details" aria-expanded="true" tabindex="0">Details</h2>
                     </summary>
-                    <div aria-labelledby="product description" tabindex="0">
+                    <div aria-labelledby="product description" tabindex="0" class="details__content">
                         <p>Note: Stamp colour on disc may vary from pictured image.</p>
                         <p>This is not a Frisbee its a quality Flying Disc, if you dont know the difference think of the Frisbee as a toy and a Flying Disc as a quality piece of sports equipment.</p>
                         <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
                     </div>
                 </details>
     
-                <details>
-                    <summary>
+                <details class="product__details__detail">
+                    <summary class="summary__desktop__tab">
                         <h2 aria-labeledby="more information" aria-controls="description" aria-expanded="true" tabindex="0">More information</h2>
                     </summary>
-                        <table aria-labelledby="table of informations" tabindex="0">
+                        <table aria-labelledby="table of informations" tabindex="0" class="details__content">
                             <tr>
                                 <td class="table-category" aria-label="style" tabindex="0">Style:</td>
                                 <td tabindex="0">Insulated, Heavy Duty, Soft Shell, ¼ zip</td>
