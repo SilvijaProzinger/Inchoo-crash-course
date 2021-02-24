@@ -13,7 +13,6 @@ const closeFiltersButton = document.getElementById('clear-button');
 
 //check window width to see if shopby filter should be opened or hidden for mobile view 
 const showOrHideSidebar = () => {
-    console.log(window.innerWidth)
     if (window.innerWidth >= 1024){
         shopByNavigation.classList.add('layered-nav');
         shopByNavigation.classList.remove('layered-nav-mobile');

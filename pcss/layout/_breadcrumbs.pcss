@@ -1,0 +1,26 @@
+.breadcrumb__link {
+    color: var( --link__color);
+    margin-right: pxtorem(6);
+
+    &:hover {
+        color: var(--link__hover__color);
+    }
+
+    &:visited {
+        color: var(--link__visited__color);
+    }
+
+    &:active {
+        color: var(--link__active__color);
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    margin-top: pxtorem(21);
+    margin-bottom: pxtorem(23);
+}
+
+.breadcrumb__current__item {
+    font-weight: 700;
+}
