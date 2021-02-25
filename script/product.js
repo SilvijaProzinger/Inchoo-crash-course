@@ -37,43 +37,56 @@ const customizeDetails = () => {
 window.addEventListener("resize", customizeDetails);
 window.onload = customizeDetails;
 
-//open and close the shopping cart
-openCart.addEventListener('click', () => {
-  cart.classList.remove('visually-hidden');
-  cart.classList.add('cart__opened');
-});
+//create a product object
+function Product(name,sku,price,color,qty){
+  this.name = name;
+  this.sku = sku;
+  this.price = price;
+  this.color = color;
+  this.qty = qty;
+}
 
-closeCart.addEventListener('click', () => {
-  cart.classList.remove('cart__opened');
-  cart.classList.add('cart__closed');
-});
+//populate cart modal
+const createCartContent = (productJSON) => {
+  productJSON.forEach((item) => {
+    console.log('ID: ' + item.name)
+  })
+}
+
+
 
 //save selected product information and send it to JSON object 
 const handleProductOrder = (event) => {
   event.preventDefault();
+  let productJSON = []
 
-  //select values from non-form elements and create object 
+  //select values from non-form elements and create a new object instance 
   const productName = document.getElementById('product-name').textContent;
   const productSku = document.getElementById('product-sku').textContent;
   const productPrice = document.getElementById('product-price').textContent;
   const productColor = document.getElementById('product-color').value;
   const productQty = document.getElementById('product-qty').value;
 
-  const values = [
-    ['productName', productName],
-    ['productSKU', productSku],
-    ['productPrice', productPrice],
-    ['productColor', productColor],
-    ['productQuantity', productQty]
-  ]
+  const productOne = new Product(productName, productSku, productPrice, productColor, productQty);
+  console.log(productOne)
 
-  console.log(values)
+  productJSON.push(JSON.stringify(productOne))
+  console.log(productJSON)
 
-  const data = Object.fromEntries(values);
-
-  console.log({data});
-  const productJSON = JSON.stringify(data)
+  createCartContent(productOne)
 };
 
-
 addToCartButton.addEventListener('submit', handleProductOrder);
+
+
+//open and close the shopping cart
+openCart.addEventListener('click', () => {
+  console.log('clicked')
+  cart.classList.remove('cart__closed');
+  cart.classList.add('cart__opened');
+});
+
+closeCart.addEventListener('click', () => {
+  cart.classList.toggle('cart__opened');
+  cart.classList.toggle('cart__closed');
+});

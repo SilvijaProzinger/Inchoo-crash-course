@@ -71,64 +71,65 @@
                 <span class="icon-shopping-cart"span>
                 <span class="visualy-hidden">Cart</span>
               </button>
-  
-              <section class="cart__opened" id="cart-container">
-                <h2>
-                  <p class="number__of__items" aria-label="number of items in cart" tabindex="0">XY item in Cart</p>
-                </h2>
-  
-                <button class="button--no-styles header__buttons" tabindex="0" aria-label="close cart">
-                  <span>Close</span>
-                  <span class="icon-x-circle"></span>
-                </button>
-  
-                <ol>
-                  <li class="cart-item">
-                    <div>
-                      <img src="" alt="Item name 1" />
-                    </div>
-  
-                    <div class="cart-item-details">
-                      <h3>
-                        <a href="" tabindex="0" aria-label="item name" class="cart-item-name">Item name 1</a>
-                      </h3>
-  
-                      <dl>
-                        <dt tabindex="0"><strong>Color:</strong></dt>
-                        <dd tabindex="0" id="color-val"></dd>
-                        <dt tabindex="0" class="price-label"><strong>Price:</strong></dt>
-                        <dd tabindex="0" id="price-val"></dd>
-                        <dd tabindex="0"><strong>Qty:</strong></dd>
-                        
-                        <dd>
-                          <form>
-                            <fieldset>
-                              <legend>Items qty form</legend>
-                              <label for="qty" tabindex="0" aria-label="items in cart">Items in Cart</label>
-                              <input name="qty" type="number" tabindex="0" aria-label="number of items in cart" id="qty-val"/>
-                            </fieldset>
-                          </form>
-                        </dd>
-                      </dl>
-                    </div>
-                  </li>
-                </ol>
-  
-                <table>
-                  <caption tabindex="0" aria-label="your cart total">Your Cart Totals table</caption>
-                  <tbody>
-                    <tr class="subtotal">
-                      <th tabindex="0" aria-label="subtotal">Cart subtotal</th>
-                      <td tabindex="0" aria-label="total price" class="total-price">$$</td>
-                    </tr>
-                  </tbody>
-                </table>
-  
-                <div class="edit-and-proceed">
-                  <a href="" title="Back to Cart page" class="edit-link">View and edit cart</a>
-                  <button class="button button--primary" tabindex="0" aria-label="proceed to checkout">Proceed to checkout</button>
-                </div>
-              </section>
+              
+                <section class="cart" id="cart-container">
+                  <h2>
+                    <p class="number__of__items" aria-label="number of items in cart" tabindex="0">XY item in Cart</p>
+                  </h2>
+    
+                  <button id="close-cart" class="button--close-cart button--no-styles header__buttons" tabindex="0" aria-label="close cart">
+                    <span>Close</span>
+                    <span class="icon-x-circle"></span>
+                  </button>
+    
+                  <ol>
+                    <li class="cart-item">
+                      <div>
+                        <img src="" alt="Item name 1" />
+                      </div>
+    
+                      <div class="cart-item-details">
+                        <h3>
+                          <a href="" tabindex="0" aria-label="item name" class="cart-item-name"></a>
+                        </h3>
+    
+                        <dl>
+                          <dt tabindex="0"><strong>Color:</strong></dt>
+                          <dd tabindex="0" id="color-val"></dd>
+                          <dt tabindex="0" class="price-label"><strong>Price:</strong></dt>
+                          <dd tabindex="0" id="price-val"></dd>
+                          <dd tabindex="0"><strong>Qty:</strong></dd>
+                          
+                          <dd>
+                            <form>
+                              <fieldset>
+                                <legend>Items qty form</legend>
+                                <label for="qty" tabindex="0" aria-label="items in cart">Items in Cart</label>
+                                <input name="qty" type="number" tabindex="0" aria-label="number of items in cart" id="qty-val"/>
+                              </fieldset>
+                            </form>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ol>
+    
+                  <table>
+                    <caption tabindex="0" aria-label="your cart total">Your Cart Totals table</caption>
+                    <tbody>
+                      <tr class="subtotal">
+                        <th tabindex="0" aria-label="subtotal">Cart subtotal</th>
+                        <td tabindex="0" aria-label="total price" class="total-price">$$</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    
+                  <div class="edit-and-proceed">
+                    <a href="" title="Back to Cart page" class="edit-link">View and edit cart</a>
+                    <button class="button button--primary" tabindex="0" aria-label="proceed to checkout">Proceed to checkout</button>
+                  </div>
+                </section>
+              
             </li>
   
             <li class="header__drawers-list__item">
@@ -328,7 +329,7 @@
                         <fieldset class="item__fieldset">
                             <legend>Item qty</legend>
                             <label for="qty" aria-label="quantity" tabindex="0">Qty:</label>
-                            <input name="qty" type="number" value="1" id="product-qty">
+                            <input name="qty" type="number" value="1" id="product-qty" min="1">
                         </fieldset> 
                         <button id="add-to-cart" class="button button--primary button--add-to-cart" type="submit" tabindex="0" aria-label="add to cart">Add to Cart</button>    
                     </div>
