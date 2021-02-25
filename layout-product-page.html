@@ -71,71 +71,77 @@
                 <span class="icon-shopping-cart"span>
                 <span class="visualy-hidden">Cart</span>
               </button>
-              
+
                 <section class="cart" id="cart-container">
-                  <h2>
-                    <p class="number__of__items" aria-label="number of items in cart" tabindex="0">XY item in Cart</p>
-                  </h2>
-    
                   <button id="close-cart" class="button--close-cart button--no-styles header__buttons" tabindex="0" aria-label="close cart">
                     <span>Close</span>
                     <span class="icon-x-circle"></span>
                   </button>
-    
-                  <ol>
-                    <li class="cart-item">
-                      <div>
-                        <img src="" alt="Item name 1" />
-                      </div>
-    
-                      <div class="cart-item-details">
-                        <h3>
-                          <a href="" tabindex="0" aria-label="item name" class="cart-item-name"></a>
-                        </h3>
-    
-                        <dl>
-                          <dt tabindex="0"><strong>Color:</strong></dt>
-                          <dd tabindex="0" id="color-val"></dd>
-                          <dt tabindex="0" class="price-label"><strong>Price:</strong></dt>
-                          <dd tabindex="0" id="price-val"></dd>
-                          <dd tabindex="0"><strong>Qty:</strong></dd>
-                          
-                          <dd>
-                            <form>
-                              <fieldset>
-                                <legend>Items qty form</legend>
-                                <label for="qty" tabindex="0" aria-label="items in cart">Items in Cart</label>
-                                <input name="qty" type="number" tabindex="0" aria-label="number of items in cart" id="qty-val"/>
-                              </fieldset>
-                            </form>
-                          </dd>
-                        </dl>
-                      </div>
-                    </li>
-                  </ol>
-    
-                  <table>
-                    <caption tabindex="0" aria-label="your cart total">Your Cart Totals table</caption>
-                    <tbody>
-                      <tr class="subtotal">
-                        <th tabindex="0" aria-label="subtotal">Cart subtotal</th>
-                        <td tabindex="0" aria-label="total price" class="total-price">$$</td>
-                      </tr>
-                    </tbody>
-                  </table>
-    
-                  <div class="edit-and-proceed">
-                    <a href="" title="Back to Cart page" class="edit-link">View and edit cart</a>
-                    <button class="button button--primary" tabindex="0" aria-label="proceed to checkout">Proceed to checkout</button>
+  
+                  <div id="if-empty">
+                    <strong>You have no items in your shopping cart</strong>
                   </div>
+                  
+                  <div id="cart-content">
+                    <h2>
+                      <p class="number__of__items" aria-label="number of items in cart" tabindex="0">XY item in Cart</p>
+                    </h2>
+      
+                    <ol>
+                      <li class="cart-item">
+                        <div>
+                          <img src="" alt="Item name 1" />
+                        </div>
+      
+                        <div class="cart-item-details">
+                          <h3>
+                            <a href="" tabindex="0" aria-label="item name" class="cart-item-name"></a>
+                          </h3>
+      
+                          <dl>
+                            <dt tabindex="0"><strong>Color:</strong></dt>
+                            <dd tabindex="0" id="color-val"></dd>
+                            <dt tabindex="0" class="price-label"><strong>Price:</strong></dt>
+                            <dd tabindex="0" id="price-val"></dd>
+                            <dd tabindex="0"><strong>Qty:</strong></dd>
+                            
+                            <dd>
+                              <form>
+                                <fieldset>
+                                  <legend>Items qty form</legend>
+                                  <label for="qty" tabindex="0" aria-label="items in cart">Items in Cart</label>
+                                  <input name="qty" type="number" tabindex="0" aria-label="number of items in cart" id="qty-val"/>
+                                </fieldset>
+                              </form>
+                            </dd>
+                          </dl>
+                        </div>
+                      </li>
+                    </ol>
+      
+                    <table>
+                      <caption tabindex="0" aria-label="your cart total">Your Cart Totals table</caption>
+                      <tbody>
+                        <tr class="subtotal">
+                          <th tabindex="0" aria-label="subtotal">Cart subtotal</th>
+                          <td tabindex="0" aria-label="total price" class="total-price">$$</td>
+                        </tr>
+                      </tbody>
+                    </table>
+      
+                    <div class="edit-and-proceed">
+                      <a href="" title="Back to Cart page" class="edit-link edit-item" tabindex="0" aria-label="view and edit cart">View and edit cart</a>
+                      <button id="checkout-button" class="button button--primary edit-item" tabindex="0" aria-label="proceed to checkout">Proceed to checkout</button>
+                    </div>
+                  </div>
+                  
                 </section>
               
             </li>
   
             <li class="header__drawers-list__item">
               <button
-                class="button--no-styles header__buttons visualy-hidden--desktop"
-              >
+                class="button--no-styles header__buttons visualy-hidden--desktop" tabindex="0" aria-label="open navigation">
                 <span class="icon-menu"></span>
                 <span class="visualy-hidden">Navigation Trigger</span>
               </button>
@@ -256,7 +262,7 @@
                 </picture>
               </li>
             <li class="breadcrumb__item" aria-label="breadcrumb">
-                <a class="breadcrumb__link" href="./layout-category-listing.html" title="Grabsee Main Category">Frisbee</a>
+                <a class="breadcrumb__link" href="./layout-category-listing.html" title="Grabsee Main Category" tabindex="0">Frisbee</a>
             </li>
             <li class="breadcrumb__item">
                 <picture>
@@ -348,42 +354,42 @@
             </div>
         </div> 
 
-            <section class="product__details">
-                <details open class="product__details__detail">
-                    <summary class="summary__desktop__tab">
-                        <h2 aria-labeledby="details" aria-controls="details" aria-expanded="true" tabindex="0">Details</h2>
-                    </summary>
-                    <div aria-labelledby="product description" tabindex="0" class="details__content">
-                        <p>Note: Stamp colour on disc may vary from pictured image.</p>
-                        <p>This is not a Frisbee its a quality Flying Disc, if you dont know the difference think of the Frisbee as a toy and a Flying Disc as a quality piece of sports equipment.</p>
-                        <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
-                    </div>
-                </details>
-    
-                <details class="product__details__detail">
-                    <summary class="summary__desktop__tab">
-                        <h2 aria-labeledby="more information" aria-controls="description" aria-expanded="true" tabindex="0">More information</h2>
-                    </summary>
-                        <table aria-labelledby="table of informations" tabindex="0" class="details__content">
-                            <tr>
-                                <td class="table-category" aria-label="style" tabindex="0">Style:</td>
-                                <td tabindex="0">Insulated, Heavy Duty, Soft Shell, ¼ zip</td>
-                            </tr>
-                            <tr>
-                                <td class="table-category" aria-label="material" tabindex="0">Material:</td>
-                                <td tabindex="0">Fleece, Polyester, Wool</td>
-                            </tr>
-                            <tr>
-                                <td class="table-category" aria-label="pattern" tabindex="0">Pattern:</td>
-                                <td tabindex="0">Solid</td>
-                            </tr>
-                            <tr>
-                                <td class="table-category" aria-label="climate" tabindex="0">Climate:</td>
-                                <td tabindex="0">All-Weather, Cool, Indoor, Spring</td>
-                            </tr>
-                        </table>
-                </details>
-            </section>
+          <section class="product__details">
+              <details open class="product__details__detail">
+                  <summary class="summary__desktop__tab">
+                      <h2 aria-labeledby="details" aria-controls="details" aria-expanded="true" tabindex="0">Details</h2>
+                  </summary>
+                  <div aria-labelledby="product description" tabindex="0" class="details__content">
+                      <p>Note: Stamp colour on disc may vary from pictured image.</p>
+                      <p>This is not a Frisbee its a quality Flying Disc, if you dont know the difference think of the Frisbee as a toy and a Flying Disc as a quality piece of sports equipment.</p>
+                      <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
+                  </div>
+              </details>
+  
+              <details class="product__details__detail">
+                  <summary class="summary__desktop__tab">
+                      <h2 aria-labeledby="more information" aria-controls="description" aria-expanded="true" tabindex="0">More information</h2>
+                  </summary>
+                      <table aria-labelledby="table of informations" tabindex="0" class="details__content">
+                          <tr>
+                              <td class="table-category" aria-label="style" tabindex="0">Style:</td>
+                              <td tabindex="0">Insulated, Heavy Duty, Soft Shell, ¼ zip</td>
+                          </tr>
+                          <tr>
+                              <td class="table-category" aria-label="material" tabindex="0">Material:</td>
+                              <td tabindex="0">Fleece, Polyester, Wool</td>
+                          </tr>
+                          <tr>
+                              <td class="table-category" aria-label="pattern" tabindex="0">Pattern:</td>
+                              <td tabindex="0">Solid</td>
+                          </tr>
+                          <tr>
+                              <td class="table-category" aria-label="climate" tabindex="0">Climate:</td>
+                              <td tabindex="0">All-Weather, Cool, Indoor, Spring</td>
+                          </tr>
+                      </table>
+              </details>
+          </section>
     </main>
 
     <footer class="footer">

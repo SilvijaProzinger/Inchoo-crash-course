@@ -7,6 +7,8 @@ const openCart = document.getElementById('show-cart');
 const closeCart = document.getElementById('close-cart');
 const addToCartButton = document.querySelector('#product-form');
 const cart = document.getElementById('cart-container');
+const checkoutButton = document.getElementById('checkout-button');
+let productJSON;
 
 //set clicked image as the one in the preview
 images.forEach((item, i) => {
@@ -47,18 +49,14 @@ function Product(name,sku,price,color,qty){
 }
 
 //populate cart modal
-const createCartContent = (productJSON) => {
-  productJSON.forEach((item) => {
-    console.log('ID: ' + item.name)
-  })
+const createCartContent = (productOne) => {
+  const values = Object.values(productOne)
+  console.log(values)
 }
-
-
 
 //save selected product information and send it to JSON object 
 const handleProductOrder = (event) => {
   event.preventDefault();
-  let productJSON = []
 
   //select values from non-form elements and create a new object instance 
   const productName = document.getElementById('product-name').textContent;
@@ -68,10 +66,8 @@ const handleProductOrder = (event) => {
   const productQty = document.getElementById('product-qty').value;
 
   const productOne = new Product(productName, productSku, productPrice, productColor, productQty);
-  console.log(productOne)
 
-  productJSON.push(JSON.stringify(productOne))
-  console.log(productJSON)
+  productJSON = JSON.stringify(productOne)
 
   createCartContent(productOne)
 };
@@ -81,12 +77,24 @@ addToCartButton.addEventListener('submit', handleProductOrder);
 
 //open and close the shopping cart
 openCart.addEventListener('click', () => {
-  console.log('clicked')
   cart.classList.remove('cart__closed');
   cart.classList.add('cart__opened');
+
+  if (productJSON === undefined){
+    document.getElementById('if-empty').style.display = 'block';
+    document.getElementById('cart-content').style.display = 'none';
+  } else {
+    document.getElementById('if-empty').style.display = 'none';
+    document.getElementById('cart-content').style.display = 'block';
+  }
 });
 
 closeCart.addEventListener('click', () => {
-  cart.classList.toggle('cart__opened');
-  cart.classList.toggle('cart__closed');
+  cart.classList.remove('cart__opened');
+  cart.classList.add('cart__closed');
 });
+
+checkoutButton.addEventListener('click', () => {
+  cart.classList.remove('cart__opened');
+  cart.classList.add('cart__closed');
+})

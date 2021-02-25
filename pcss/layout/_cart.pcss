@@ -5,6 +5,7 @@
     padding-right: pxtorem(28);
     padding-bottom: pxtorem(270);
     position: absolute;
+    z-index: 5;
     right:0;
     top: 0;
     transform: translateX(100%);
@@ -16,13 +17,15 @@
 }
 
 .cart__closed {
-    display: none;
+    transform: translateX(100%);
 }
 
 .button--close-cart {
     color: var(--neutral-90);
-    float: right;
+    width: 80px;
+    height: 48px;
     position: fixed;
+    z-index: 6;
     top: pxtorem(30);
     right: pxtorem(30);
 }
@@ -49,6 +52,7 @@
 
 .edit-link {
     color: var(--link__color);
+    align-self: center;
 }
 
 .total-price {
@@ -58,6 +62,8 @@
 
 .edit-and-proceed {
     margin-top: pxtorem(24);
+    display: flex;
+    justify-content: space-between;
 }
 
 .cart-item-details {
@@ -74,4 +80,8 @@ fieldset legend {
 
 table caption {
     opacity: 0;
+}
+
+.if-empty {
+    margin-top: pxtorem(20);
 }
