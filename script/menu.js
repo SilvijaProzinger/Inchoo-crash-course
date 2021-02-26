@@ -3,6 +3,7 @@ const closeMenuButton = document.getElementById('close-menu');
 const menuBody = document.getElementById('menu-container');
 const openCategory = document.querySelectorAll('#open-category')
 const openSubCategory = document.querySelectorAll('#open-subcategory');
+const subCategory = document.querySelectorAll('.sub-container');
 
 openMenuButton.addEventListener('click', () => {
     menuBody.classList.remove('hidden');
@@ -29,13 +30,18 @@ const mobileOrDesktopMenu = () => {
 window.addEventListener("resize", mobileOrDesktopMenu);
 window.onload = mobileOrDesktopMenu;
 
+/* napraviti for petlju da otvara odgovarajući br indexa accordiona */
 openCategory.forEach(accordion => {
     accordion.addEventListener('click', () => {
+        let list = document.getElementById('category-item').querySelectorAll('.category-container');
         if (window.innerWidth >= 1024){
-            document.querySelectorAll('.category-container').classList.toggle('accordion-opened');
-            document.querySelectorAll('.sub-container').classList.toggle('accordion-opened');
+            list.forEach(div => {
+                div.classList.toggle('accordion-opened')
+        })
         } else {
-            accordion.nextElementSibling.classList.toggle('accordion-opened')
+            list.forEach(div => {
+                div.classList.toggle('accordion-opened')
+            })
         }
     });
 });

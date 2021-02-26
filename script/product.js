@@ -23,6 +23,7 @@ details.forEach(openedDetail => {
 
 const customizeDetails = () => {
     const getBottomHeight = document.querySelector('.details__content').offsetHeight;
+    console.log(getBottomHeight)
 
     if (window.innerWidth >= 1024){
         detailsContainer.style.marginBottom = getBottomHeight + 100 +'px'
@@ -30,5 +31,6 @@ const customizeDetails = () => {
 };
 
 window.addEventListener("resize", customizeDetails);
-window.onload = customizeDetails;
-
+document.addEventListener('DOMContentLoaded', function () {
+  customizeDetails()
+});
