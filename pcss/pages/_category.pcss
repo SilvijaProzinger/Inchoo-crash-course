@@ -251,6 +251,10 @@ footer {
     text-transform: uppercase;
     font-family: 'Open Sans';
     font-weight: 700;
+
+    @media (--large) {
+        font-size: 14px;
+    }
 }
 
 .price {
@@ -327,4 +331,8 @@ footer {
 .wishlist__list {
     align-self: flex-end;
     display: flex;
+}
+
+.link__no-style {
+    color: var(--color-white);
 }
