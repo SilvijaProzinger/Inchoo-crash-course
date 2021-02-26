@@ -33,16 +33,8 @@ window.onload = mobileOrDesktopMenu;
 /* napraviti for petlju da otvara odgovarajući br indexa accordiona */
 openCategory.forEach(accordion => {
     accordion.addEventListener('click', () => {
-        let list = document.getElementById('category-item').querySelectorAll('.category-container');
-        if (window.innerWidth >= 1024){
-            list.forEach(div => {
-                div.classList.toggle('accordion-opened')
-        })
-        } else {
-            list.forEach(div => {
-                div.classList.toggle('accordion-opened')
-            })
-        }
+        accordion.nextElementSibling.classList.toggle('accordion-opened');
+        accordion.nextElementSibling.nextElementSibling.classList.toggle('accordion-opened');
     });
 });
 
