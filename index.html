@@ -141,110 +141,101 @@
           </li>
 
           <li class="header__drawers-list__item">
-            <button
-              class="button--no-styles header__buttons visualy-hidden--desktop" tabindex="0" aria-label="open navigation">
+            <button id="open-menu" class="button--no-styles header__buttons visualy-hidden--desktop" tabindex="0" aria-label="open navigation">
               <span class="icon-menu"></span>
               <span class="visualy-hidden">Navigation Trigger</span>
             </button>
 
-            <nav class="visualy-hidden">
-              <ul>
-                <li>
-                  <h2>Frisbees</h2>
-
-                  <div>
-                    <h3 tabindex="0">Ultimate Frisbees</h3>
-
-                    <ul>
-                      <li>
-                        <a href="./layout-category-listing.html"
-                          >Innova Pulsar</a
-                        >
-                      </li>
-                      <li><a href="">Xcom</a></li>
-                      <li><a href="">Aviator - Marvel Captian America</a></li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 tabindex="0">Recreational</h3>
-
-                    <ul>
-                      <li><a href="">Nite</a></li>
-                      <li><a href="">Yikin</a></li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3>Contact us</h3>
-
-                    <ul>
-                      <li tabindex="0">Trg Slobode 6</li>
-                      <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-                      <li>
-                        <a href="mailto:filip.svetlicic@gmail.com"
-                          >filip.svetlicic@gmail.com</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <h2>Clothing</h2>
-
-                  <div>
-                    <h3 tabindex="0">Ultimate Frisbees</h3>
-
-                    <ul>
-                      <li>
-                        <a href="./layout-category-listing.html"
-                          >Innova Pulsar</a
-                        >
-                      </li>
-                      <li><a href="./layout-category-listing.html">Xcom</a></li>
-                      <li>
-                        <a href="./layout-category-listing.html"
-                          >Aviator - Marvel Captian America</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3>Recreational</h3>
-
-                    <ul>
-                      <li><a href="">Nite</a></li>
-                      <li><a href="">Yikin</a></li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 tabindex="0">Contact us</h3>
-
-                    <ul>
-                      <li tabindex="0">Trg Slobode 6</li>
-                      <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-                      <li>
-                        <a href="mailto:filip.svetlicic@gmail.com"
-                          >filip.svetlicic@gmail.com</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <h2>Accessories</h2>
-                </li>
-                <li>
-                  <h2>Contact us</h2>
-                </li>
-              </ul>
-
-              <button class="button--no-styles header__buttons">
+            <nav id="menu-container">
+              <button class="button--close-menu button--no-styles header__buttons" id="close-menu" tabindex="0" aria-label="close navigation">
                 <span>Close</span>
                 <span class="icon-x-circle"></span>
               </button>
+              <p class="menu-title">Menu</p>
+
+              <ul class="menu-items" tabindex="0">
+                <li class="menu-item">
+                  <h2 tabindex="0" id="open-category">Frisbees</h2>
+
+                  <div class="category-container" id="category-cont">
+                    <h3 tabindex="0"  id="open-subcategory">Ultimate Frisbees</h3>
+
+                    <ul class="sub-container">
+                      <li><a href="./layout-category-listing.html">Innova Pulsar</a></li>
+                      <li><a href="./layout-category-listing.html">Xcom</a></li>
+                      <li><a href="./layout-category-listing.html">Aviator - Marvel Captian America</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="category-container">
+                    <h3 tabindex="0"  id="open-subcategory">Recreational</h3>
+
+                    <ul class="sub-container">
+                      <li><a href="./layout-category-listing.html" tabindex="0" aria-label="nite ize flashlight">Nite Ize Flashlight</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0"aria-label="yikin 100g kids">Yikin 100G Kids</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <h2 tabindex="0" id="open-category">Clothing</h2>
+
+                  <div class="category-container">
+                    <h3 tabindex="0"  id="open-subcategory">Ultimate Frisbees</h3>
+
+                    <ul class="sub-container">
+                      <li><a href="./layout-category-listing.html" tabindex="0">Innova Pulsar</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0">Xcom</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0">Aviator - Marvel Captian America</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="category-container">
+                    <h3 tabindex="0"  id="open-subcategory">Recreational</h3>
+
+                    <ul class="sub-container">
+                      <li><a href="./layout-category-listing.html" tabindex="0">Nite Ize Flashlight</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0">Yikin 100G Kids</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <h2 tabindex="0" id="open-category">Accessories</h2>
+
+                  <div class="category-container">
+                    <h3 tabindex="0"  id="open-subcategory">Ultimate Frisbees</h3>
+
+                    <ul class="sub-container">
+                      <li><a href="./layout-category-listing.html" tabindex="0">Innova Pulsar</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0">Xcom</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0">Aviator - Marvel Captian America</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="category-container">
+                    <h3 tabindex="0"  id="open-subcategory">Recreational</h3>
+
+                    <ul class="sub-container">
+                      <li><a href="./layout-category-listing.html" tabindex="0">Nite Ize Flashlight</a></li>
+                      <li><a href="./layout-category-listing.html" tabindex="0">Yikin 100G Kids</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <h2 tabindex="0" id="open-category">Contact us</h2>
+
+                  <div class="category-container">
+                    <h3 tabindex="0" id="open-subcategory">Contact us</h3>
+                    <ul class="sub-container">
+                      <li tabindex="0" aria-label="address">Trg Slobode 6</li>
+                      <li tabindex="0" aria-label="phone number"><a href="tel:+385958811630">+385 95 8811630</a></li>
+                      <li tabindex="0" aria-label="email"><a href="mailto:filip.svetlicic@gmail.com">filip.svetlicic@gmail.com</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </nav>
           </li>
         </ul>
@@ -427,5 +418,6 @@
     </footer>
     <script src="./script/home.js"></script>
     <script src="./script/cart-navigation.js"></script>
+    <script src="./script/menu.js"></script>
   </body>
 </html>

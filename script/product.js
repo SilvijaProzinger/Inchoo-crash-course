@@ -11,7 +11,7 @@ images.forEach((item, i) => {
 });
 
 //open the details tab one by one 
-details.forEach((openedDetail) => {
+details.forEach(openedDetail => {
   openedDetail.addEventListener("click", () => {
     details.forEach((detail) => {
       if (detail !== openedDetail) {

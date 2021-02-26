@@ -1,0 +1,114 @@
+.hidden {
+    display: none;
+}
+
+.menu-mobile {
+    display: block;
+    width: 100%;
+}
+
+.menu-items {
+    margin-left: pxtorem(12);
+    margin-right: pxtorem(12);
+    margin-top: pxtorem(34);
+
+    @media (--large) {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+.menu-items h2 {
+    text-transform: uppercase;
+    font-size: pxtorem(12);
+    font-weight: 700;
+    font-family: 'Open Sans';
+    border-bottom: 1px solid var(--neutral-10);
+    cursor: pointer;
+
+    @media (--large) {
+        background-color: var(--secondary__color);
+        color: var(--color-white);
+        top: 96px;
+        width: 100%;
+        padding-left: pxtorem(103);
+        margin-left: pxtorem(-20);
+        font-family: var(--headings__type);
+        font-weight: 400;
+        position: fixed;
+    }
+}
+
+.menu-items h3 {
+    text-transform: uppercase;
+    font-size: pxtorem(12);
+    color: var(--neutral-color);
+    font-weight: 400;
+    font-family: 'Open Sans';
+    margin-top: pxtorem(10);
+    margin-bottom: pxtorem(10);
+    cursor: pointer;
+
+    @media (--large) {
+        font-weight: 700;
+    }
+}
+
+.menu-mobile {
+    background-color: var(--color-white);
+    z-index: 5;
+    position: absolute;
+    top:0;
+    right: 0;
+
+}
+
+.menu-title {
+    color: var(--primary__color);
+    text-transform: uppercase;
+    margin-top: pxtorem(72);
+    margin-left: pxtorem(12);
+
+    @media (--large) {
+        display: none;
+    }
+}
+
+.category-container {
+    //border-bottom: 1px solid var(--neutral-10);
+    display: none;
+    @media (--large) {
+        margin-top: pxtorem(24);
+    }
+}
+
+.sub-container {
+    display: none;
+}
+
+.sub-container a {
+    color: var(--neutral-color);
+    text-transform: uppercase;
+    margin-left: pxtorem(24);
+}
+
+.accordion-opened {
+    display: block;
+}
+
+.button--close-menu {
+    color: var(--neutral-color);
+    float: right;
+    margin-top: pxtorem(24);
+}
+
+.menu-desktop {
+    width: 100%;
+    background-color: var(--color-white);
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    top: pxtorem(96);
+}
+
