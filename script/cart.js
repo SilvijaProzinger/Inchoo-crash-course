@@ -12,12 +12,19 @@ function Product(name,sku,price,color,qty){
     this.price = price;
     this.color = color;
     this.qty = qty;
-  }
+}
   
   //populate cart modal
   const createCartContent = (productOne) => {
     const values = Object.values(productOne)
     console.log(values)
+
+    document.getElementById('cart-item-img').src = document.getElementById('featured').src;
+    document.querySelector('.cart-item-name').innerHTML = values[0];
+    document.getElementById('color-val').innerHTML = values[3];
+    document.getElementById('price-val').innerHTML = values[2];
+    document.getElementById('qty-val').value = values[4];
+    document.getElementById('total-val').innerHTML = values[2];
   }
   
   //save selected product information and send it to JSON object 
