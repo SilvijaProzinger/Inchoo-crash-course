@@ -24,7 +24,6 @@ const mobileOrDesktopMenu = () => {
     } else {
         menuBody.classList.remove('menu-desktop');
         menuBody.classList.add('hidden');
-        menuBody.classList.add('menu-mobile');
     };
 };
 
