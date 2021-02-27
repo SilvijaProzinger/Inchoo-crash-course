@@ -83,3 +83,13 @@ closeFiltersButton.addEventListener('click', () => {
     document.getElementById('selected').style.display = 'none';
     document.querySelector('.selected__filter').innerHTML = '';
 })
+
+//hide the keyboard focus for when the user is not using keyboard 
+const handleTab = (e) => {
+    if (e.keyCode === 9) {
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleTab);
+    }
+}
+
+window.addEventListener('keydown', handleTab);

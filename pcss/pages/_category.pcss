@@ -223,6 +223,10 @@ footer {
     margin-bottom: pxtorem(17);
 }
 
+.product__picture {
+    margin-right: pxtorem(39);
+}
+
 .product__name {
     color: var(--link__color);
     font-size: 12px;
@@ -317,4 +321,11 @@ footer {
 
 .icon-shopby {
     color: var(--secondary__color)
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
 }
