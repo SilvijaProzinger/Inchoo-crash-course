@@ -18,12 +18,13 @@ closeMenuButton.addEventListener('click', () => {
 //check resolution to see if menu should be for mobile or desktop 
 const mobileOrDesktopMenu = () => {
     if (window.innerWidth >= 1024){
-        menuBody.classList.add('menu-desktop');
+        menuBody.classList.add('menu-desktop');        
+        menuBody.classList.remove('hidden');
         menuBody.classList.remove('menu-mobile');
-        menuBody.classList.remove('hidden')
     } else {
         menuBody.classList.remove('menu-desktop');
         menuBody.classList.add('hidden');
+        menuBody.classList.add('menu-mobile');
     };
 };
 
