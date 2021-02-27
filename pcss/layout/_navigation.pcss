@@ -34,6 +34,7 @@
     font-family: 'Open Sans';
     border-bottom: 1px solid var(--neutral-10);
     cursor: pointer;
+    margin-right: pxtorem(12);
 
     @media (--large) {
         color: var(--color-white);
@@ -69,8 +70,7 @@
     z-index: 5;
     position: absolute;
     top:0;
-    right: 0;
-
+    left: 0;
 }
 
 .menu-title {
@@ -84,18 +84,27 @@
     }
 }
 
-.category-container {
+.desktop-containers {
     display: none;
+}
+
+.category-container {
 
     @media (--large) {
         margin-top: pxtorem(24);
         background-color: var(--color-white);
+        display: block;
     }
 }
 
 .sub-container {
     display: none;
     margin-bottom: pxtorem(20);
+
+    @media (--large) {
+        display: block;
+        margin-bottom: pxtorem(24);
+    }
 }
 
 .sub-container a {
@@ -106,6 +115,18 @@
 
 .accordion-opened {
     display: block;
+
+    @media (--large) {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        z-index: 7;
+        top: 22px;
+        left: -20px;
+    }
 }
 
 .button--close-menu {
@@ -126,4 +147,12 @@
     z-index: 3;
     top: pxtorem(96);
     background-color: var(--secondary__color);
+}
+
+.icon-plus-circle {
+    color: var(--neutral-90);
+
+    @media (--large) {
+        display: none;
+    }
 }

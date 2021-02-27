@@ -204,7 +204,7 @@ footer {
     background-color: var(--neutral-10);
     color: var(--text__color);
 
-    &:first-child {
+    &:active {
         background-color: var(--button-secondary__background__color);
         color: var(--color-white);
     }
@@ -212,6 +212,11 @@ footer {
     &:visited {
         color: var(--text__color);
     }
+}
+
+.pagination__link--current {
+    background-color: var(--button-secondary__background__color);
+    color: var(--color-white);
 }
 
 .limiter {

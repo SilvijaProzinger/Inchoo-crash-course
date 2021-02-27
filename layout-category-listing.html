@@ -273,7 +273,7 @@
               <div class="filter__section" id="selected">
                 <p class="filter__section__title">Now shopping by</p>
                 <p class="selected__filter"><span></span></p>
-                <button id="clear-button" class="clear__all">Clear all filters</button>                  
+                <button id="clear-button" class="clear__all" aria-label="clear all filters">Clear all filters</button>                  
               </div>
               <div class="view__sort__options">
                   <ul class="grid__list__buttons">
@@ -291,7 +291,7 @@
 
                   <div class="sort">
                       <label for="sort-by">Sort by:</label>
-                      <select type="select" name="sort-by" id="sort-by" class="sort__selection">
+                      <select type="select" name="sort-by" id="sort-by" class="sort__selection" tabindex="0" aria-label="sort by">
                           <option value="best-selers">Bestseller</option>
                           <option value="price">Price</option>
                       </select>
@@ -328,7 +328,7 @@
                                 <source/>
                                 <img src="./assets/img/icons/star-half.svg" class="star" alt=""/>
                               </picture>
-                              <p class="rating__number">2</p>
+                              <p class="rating__number" tabindex="0" aria-label="number of stars">2</p>
                             </div>
                         </div>
                         <p class="price" tabindex="0" aria-label="price">As low as <strong>$21.99</strong></p>
@@ -374,10 +374,10 @@
                             <source/>
                             <img src="./assets/img/icons/star-half.svg" class="star" alt=""/>
                           </picture>
-                          <p class="rating__number">2</p>
+                          <p class="rating__number" tabindex="0" aria-label="number of stars">2</p>
                         </div>
                     </div>
-                      <p class="price">As low as <strong>$21.99</strong></p>
+                      <p class="price" tabindex="0">As low as <strong>$21.99</strong></p>
                       <form action="">
                           <input type="hidden" name="product" value="">
                           <button type="submit" class="button button--primary button__add-product" tabindex="0" aria-label="add to cart"><a href="./layout-product-page.html" class="link__no-style">Add to Cart</a></button>
@@ -420,10 +420,10 @@
                             <source/>
                             <img src="./assets/img/icons/star-half.svg" class="star" alt=""/>
                           </picture>
-                          <p class="rating__number">2</p>
+                          <p class="rating__number" tabindex="0" aria-label="number of stars">2</p>
                         </div>
                     </div>
-                    <p class="price">As low as <strong>$21.99</strong></p>
+                    <p class="price" tabindex="0">As low as <strong>$21.99</strong></p>
                     <form action="">
                         <input type="hidden" name="product" value="">
                         <button type="submit" class="button button--primary button__add-product" tabindex="0" aria-label="add to cart"><a href="./layout-product-page.html" class="link__no-style">Add to Cart</a></button>
@@ -466,21 +466,21 @@
                           <source/>
                           <img src="./assets/img/icons/star-half.svg" class="star" alt=""/>
                         </picture>
-                        <p class="rating__number">2</p>
+                        <p class="rating__number" tabindex="0" aria-label="number of stars">2</p>
                       </div>
                   </div>
-                  <p class="price">As low as <strong>$21.99</strong></p>
+                  <p class="price" tabindex="0">As low as <strong>$21.99</strong></p>
                   <form action="">
-                      <input type="hidden" name="product" value="">
+                      <input type="hidden" name="product" value="" tabindex="0">
                       <button type="submit" class="button button--primary button__add-product" tabindex="0" aria-label="add to cart"><a href="./layout-product-page.html" class="link__no-style">Add to Cart</a></button>
                   </form>
                 </div>
                 <ul id ="wishlist-compare" class="wishlist__and__compare">
                   <li class="wishlist__item">
-                      <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
+                      <a href="" title="Add to wishlist" tabindex="0"><span class="icon-heart"></span></a>
                   </li>
                   <li class="compare__item">
-                      <a href="" title="Add to Compare"><span class="icon-bar-chart"></span></a>
+                      <a href="" title="Add to Compare" tabindex="0"><span class="icon-bar-chart"></span></a>
                   </li>
                 </ul>
               </li>
@@ -488,18 +488,18 @@
 
               <div class="pagination__show">
                   <ul class="pagination pagination__list">
-                      <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
-                      <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
-                      <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
-                      <li class="pagination__item"><a class="pagination__link" href=""><span class="icon-arrow-right"></span></a></li>
+                      <li class="pagination__item"><span class="pagination__link pagination__link--current" tabindex="0">1</span></li>
+                      <li class="pagination__item"><a class="pagination__link" href="" tabindex="0">2</a></li>
+                      <li class="pagination__item"><a class="pagination__link" href="" tabindex="0">3</a></li>
+                      <li class="pagination__item"><a class="pagination__link" href="" tabindex="0"><span class="icon-arrow-right"></span></a></li>
                   </ul>
 
                   <div class="limiter">
                       <label for="limiter">Show</label>
-                      <select name="limiter" id="limiter">
-                          <option value="8">8</option>
-                          <option value="16">16</option>
-                          <option value="99">99</option>
+                      <select name="limiter" id="limiter" aria-label="show number of items" tabindex="0">
+                          <option value="8" tabindex="0" aria-label="8">8</option>
+                          <option value="16" tabindex="0" aria-label="16">16</option>
+                          <option value="99" tabindex="0" aria-label="99">99</option>
                       </select>
                   </div>
               </div>
@@ -507,7 +507,7 @@
       </main>
 
       <aside id="aside">
-        <button id="close-shop-by" class="button--no-styles header__buttons button--close-nav">
+        <button id="close-shop-by" class="button--no-styles header__buttons button--close-nav" tabindex="0" aria-label="close filters">
             <span>Close</span>
             <span class="icon-x-circle"></span>
         </button>
@@ -519,16 +519,16 @@
                 <dd class="layered-nav__list__item">
                   <ul>
                       <li>
-                        <a href="">Black</a>
+                        <a href="" tabindex="0" aria-label="black color">Black</a>
                       </li>
                       <li>
-                          <a href="">Orange</a>
+                          <a href="" tabindex="0" aria-label="orange color">Orange</a>
                       </li>
                       <li>
-                          <a href="">Blue</a>
+                          <a href="" tabindex="0" aria-label="blue color">Blue</a>
                       </li>
                       <li>
-                        <a href="">White</a>
+                        <a href="" tabindex="0" aria-label="white color">White</a>
                     </li>
                   </ul>
               </dd>
@@ -540,15 +540,15 @@
                 <dd class="layered-nav__list__item">
                   <ul>
                       <li>
-                          <input class="" type="checkbox" id="size_s" name="size_s">
+                          <input class="" type="checkbox" id="size_s" name="size_s" tabindex="0">
                           <label for="size_s">S</label>
                       </li>
                       <li>
-                          <input class="" type="checkbox" id="size_m" name="size_m">
+                          <input class="" type="checkbox" id="size_m" name="size_m" tabindex="0">
                           <label for="size_m">M</label>
                       </li>
                       <li>
-                          <input class="" type="checkbox" id="size_l" name="size_l">
+                          <input class="" type="checkbox" id="size_l" name="size_l" tabindex="0">
                           <label for="size_l">L</label>
                       </li>
                   </ul>
@@ -561,11 +561,11 @@
                 <dd class="layered-nav__list__item">
                   <ul>
                       <li>
-                          <input class="" type="checkbox" id="material_pvc" name="material_pvc">
+                          <input class="" type="checkbox" id="material_pvc" name="material_pvc" tabindex="0">
                           <label for="material_pvc">Strong PVC</label>
                       </li>
                       <li>
-                          <input class="" type="checkbox" id="material_composit" name="material_composit">
+                          <input class="" type="checkbox" id="material_composit" name="material_composit" tabindex="0">
                           <label for="material_composit">Carbon</label>
                       </li>
                   </ul>
@@ -575,7 +575,7 @@
             <details>
               <summary class="label-level-0">Price</summary>
               <dd class="layered-nav__list__item">
-                  <input type="range" id="price_range" name="price_range">
+                  <input type="range" id="price_range" name="price_range" tabindex="0">
                   <label for="price_range">Select price range</label>
               </dd>
             </details>

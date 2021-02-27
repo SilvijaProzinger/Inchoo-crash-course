@@ -23,26 +23,36 @@ const mobileOrDesktopMenu = () => {
         menuBody.classList.remove('hidden')
     } else {
         menuBody.classList.remove('menu-desktop');
-        menuBody.classList.add('hidden')
-    }
+        menuBody.classList.add('hidden');
+    };
 };
 
 window.addEventListener("resize", mobileOrDesktopMenu);
 window.onload = mobileOrDesktopMenu;
 
-/* napraviti for petlju da otvara odgovarajući br indexa accordiona */
 openCategory.forEach(accordion => {
-    accordion.addEventListener('click', () => {
-        accordion.nextElementSibling.classList.toggle('accordion-opened');
-        accordion.nextElementSibling.nextElementSibling.classList.toggle('accordion-opened');
-    });
-});
+    if (window.innerWidth >= 1024){
+        accordion.addEventListener('click', () => {
+            accordion.nextElementSibling.classList.toggle('accordion-opened');
+        });
+    } else {
+        accordion.addEventListener('click', () => {
+            let parentElement = accordion.nextElementSibling;
+            parentElement.classList.toggle('accordion-opened')
+            parentElement.querySelectorAll('.category-container').forEach(element => {
+                element.classList.toggle('accordion-opened');
+            });
+        })
+    }
+})
 
 openSubCategory.forEach(subcagetory => {
     console.log('click')
-    subcagetory.addEventListener('click', () => {
-        subcagetory.nextElementSibling.classList.toggle('accordion-opened');
-    });
+    if (window.innerWidth <= 1023){
+        subcagetory.addEventListener('click', () => {
+            subcagetory.nextElementSibling.classList.toggle('accordion-opened');
+        });
+    }
 });
 
 
