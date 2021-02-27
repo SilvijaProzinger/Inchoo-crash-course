@@ -31,26 +31,26 @@
       </h1>
       <ul class="header__drawers-list">
         <li class="header__drawers-list__item">
-          <button class="button--no-styles header__buttons" tabindex="0" aria-label="search">
+          <button class="button--no-styles header__buttons" tabindex="0" aria-label="search" id="search">
             <span class="icon-search"></span>
             <span class="visualy-hidden">Search From Trigger</span>
           </button>
 
-          <div class="visualy-hidden">
+          <div class="search__hidden" id="search-container">
             <form>
-              <fieldset>
+              <fieldset class="search__fieldset">
                 <legend class="visualy-hidden" tabindex="0">
                   Grabsbee search form
                 </legend>
-                <label tabindex="0" for="search"
-                  >Enter here your search term</label
+                <label class="visualy-hidden" tabindex="0" for="search">Search</label
                 >
                 <input
                   name="search"
                   type="search"
-                  placeholder="Enter here your search term"
+                  placeholder="Search entire store here"
                   aria-label="Search through site content"
                   tabindex="0"
+                  class="search__input"
                 />
                 <button class="button--no-styles" tabindex="0" aria-label="search">
                   <span class="icon-search"></span>
@@ -59,7 +59,7 @@
               </fieldset>
             </form>
 
-            <button class="button--close-cart button--no-styles header__buttons" id="close-cart" tabindex="0" aria-label="close cart">
+            <button class="button--close-search button--no-styles header__buttons" id="close-search" tabindex="0" aria-label="close cart">
               <span>Close</span>
               <span class="icon-x-circle"></span>
             </button>
@@ -483,5 +483,6 @@
     <script src="./script/cart.js"></script>
     <script src="./script/cart-navigation.js"></script>
     <script src="./script/menu.js"></script>
+    <script src="./script/search.js"></script>
 </body>
 </html>
