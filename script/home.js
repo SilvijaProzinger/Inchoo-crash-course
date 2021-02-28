@@ -17,6 +17,7 @@ subscribeButton.addEventListener('click', event => {
 let slideIndex = 1;
 const previousButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
+const dotButtons = document.querySelectorAll('#dot-control');
 
 const showSlides = n => {
   let i;
@@ -41,17 +42,17 @@ const showSlides = n => {
 
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-}
+};
 
 showSlides(slideIndex);
 
 const plusSlides = n => {
   showSlides(slideIndex += n);
-}
+};
 
 const currentSlide = n => {
   showSlides(slideIndex = n);
-}
+};
 
 previousButton.addEventListener('click', () => {
 	plusSlides(-1)
@@ -59,4 +60,11 @@ previousButton.addEventListener('click', () => {
 
 nextButton.addEventListener('click', () => {
 	plusSlides(1);
-})
+});
+
+for (let i = 0; i < dotButtons.length; i++) {
+	dotButtons[i].addEventListener('click', () => {
+		currentSlide(i+1)
+		console.log(i)
+	})
+}
