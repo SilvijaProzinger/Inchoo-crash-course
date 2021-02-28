@@ -67,8 +67,9 @@ filterOption.forEach(option => {
         if (event.target.tagName == 'A') {
             event.preventDefault() 
             selectedFilter = event.target.innerText
-        } else if (event.target.checked){
-            selectedFilter = event.target.id
+        } else if (event.target.checked || event.target.name === 'price_range'){
+            selectedFilter = event.target.value
+            console.log(selectedFilter)
         } else {
             selectedFilter = ''
             document.getElementById('selected').style.display = 'none';
