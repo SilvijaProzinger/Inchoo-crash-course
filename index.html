@@ -252,8 +252,50 @@
 
     <main>
       <section>
-        <ul class="hero-slider-list">
-          <li class="hero-slider-list__item">
+        <ul class="hero-slider-list" id="slider-parent">
+          <li class="hero-slider-list__item fade">
+            <div class="hero-slider-list__inner">
+              <h1 class="hero-slider-list__title">The flying disk store</h1>
+              <a
+                href="./layout-category-listing.html"
+                class="button button--primary button--hero-slider"
+                >Buy the disk</a
+              >
+            </div>
+            <picture class="hero-slider-list__banner">
+              <source
+                srcset="./assets/img/home-page/slider/slide-1-desktop.jpg"
+                media="(min-width: 1024px)"
+              />
+              <source srcset="./assets/img/home-page/slider/slide-1-mob.jpg" />
+              <img
+                src="./assets/img/home-page/slider/slide-1-desktop.jpg"
+                alt="Hero Slide 01"
+              />
+            </picture>
+          </li>
+          <li class="hero-slider-list__item fade">
+            <div class="hero-slider-list__inner">
+              <h1 class="hero-slider-list__title">The flying disk store</h1>
+              <a
+                href="./layout-category-listing.html"
+                class="button button--primary button--hero-slider"
+                >Buy the disk</a
+              >
+            </div>
+            <picture class="hero-slider-list__banner">
+              <source
+                srcset="./assets/img/home-page/slider/slide-1-desktop.jpg"
+                media="(min-width: 1024px)"
+              />
+              <source srcset="./assets/img/home-page/slider/slide-1-mob.jpg" />
+              <img
+                src="./assets/img/home-page/slider/slide-1-desktop.jpg"
+                alt="Hero Slide 01"
+              />
+            </picture>
+          </li>
+          <li class="hero-slider-list__item fade">
             <div class="hero-slider-list__inner">
               <h1 class="hero-slider-list__title">The flying disk store</h1>
               <a
@@ -275,30 +317,16 @@
             </picture>
           </li>
           <li>
-            <h1>The flying slider 2</h1>
-            <a
-              href="./layout-category-listing.html"
-              class="button button--primary"
-              >Buy the disk</a
-            >
-            <picture>
-              <source />
-              <img src="" alt="" />
-            </picture>
-          </li>
-          <li>
-            <h1>The flying slider 3</h1>
-            <a
-              href="./layout-category-listing.html"
-              class="button button--primary"
-              >Buy the disk</a
-            >
-            <picture>
-              <source />
-              <img src="" alt="" />
-            </picture>
+            <button tabindex="0" class="previous" id="prev-button"><span class="icon-arrow-left arrow"></span></button>
+            <button tabindex="0" class="next" id="next-button"><span class="icon-arrow-right arrow"></span></button>
           </li>
         </ul>
+
+        <div class="slider-dots">
+          <span class="dot" id="dot-control"></span>
+          <span class="dot" id="dot-control"></span>
+          <span class="dot" id="dot-control"></span>
+        </div>
       </section>
 
       <section class="container">

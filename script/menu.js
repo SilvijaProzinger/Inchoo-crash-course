@@ -32,9 +32,12 @@ window.onload = mobileOrDesktopMenu;
 
 openCategory.forEach(accordion => {
     if (window.innerWidth >= 1024){
-        accordion.addEventListener('click', () => {
+        accordion.addEventListener('mouseenter', () => {
             accordion.nextElementSibling.classList.toggle('accordion-opened');
-        });
+        })
+        accordion.addEventListener('mouseleave', () => {
+            accordion.nextElementSibling.classList.toggle('accordion-opened');
+        })
     } else {
         accordion.addEventListener('click', () => {
             let parentElement = accordion.nextElementSibling;
@@ -44,7 +47,7 @@ openCategory.forEach(accordion => {
             });
         })
     }
-})
+});
 
 openSubCategory.forEach(subcagetory => {
     console.log('click')
