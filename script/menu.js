@@ -3,6 +3,7 @@ const closeMenuButton = document.getElementById('close-menu');
 const menuBody = document.getElementById('menu-container');
 const openCategory = document.querySelectorAll('#open-category')
 const openSubCategory = document.querySelectorAll('#open-subcategory');
+const closeCategory= document.querySelectorAll('#category-item');
 const subCategory = document.querySelectorAll('.sub-container');
 
 openMenuButton.addEventListener('click', () => {
@@ -31,12 +32,9 @@ window.addEventListener("resize", mobileOrDesktopMenu);
 window.onload = mobileOrDesktopMenu;
 
 openCategory.forEach(accordion => {
-    if (window.innerWidth >= 1024){
+    if (window.innerWidth >= 1024) {
         accordion.addEventListener('mouseenter', () => {
-            accordion.nextElementSibling.classList.toggle('accordion-opened');
-        })
-        accordion.addEventListener('mouseleave', () => {
-            accordion.nextElementSibling.classList.toggle('accordion-opened');
+            accordion.nextElementSibling.classList.add('accordion-opened');
         })
     } else {
         accordion.addEventListener('click', () => {
@@ -48,6 +46,16 @@ openCategory.forEach(accordion => {
         })
     }
 });
+
+closeCategory.forEach(category => {
+    if (window.innerWidth >= 1024) {
+        category.addEventListener('mouseleave', () => {
+            category.querySelectorAll('.desktop-containers').forEach(categoryChild => {
+                categoryChild.classList.remove('accordion-opened')
+            })
+        })
+    }
+})
 
 openSubCategory.forEach(subcagetory => {
     console.log('click')
