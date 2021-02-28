@@ -23,7 +23,9 @@ const showOrHideSidebar = () => {
 };
 
 window.addEventListener("resize", showOrHideSidebar);
-window.onload = showOrHideSidebar;
+document.addEventListener('DOMContentLoaded', function () {
+    showOrHideSidebar()
+  });
 
 //switch between grid and list view
 listButton.addEventListener('click', () => {

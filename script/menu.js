@@ -35,7 +35,9 @@ openCategory.forEach(accordion => {
     if (window.innerWidth >= 1024) {
         accordion.addEventListener('mouseenter', () => {
             accordion.nextElementSibling.classList.add('accordion-opened');
-        })
+            accordion.querySelector('span').classList.remove('icon-chevron-down');
+            accordion.querySelector('span').classList.add('icon-chevron-up');
+        });
     } else {
         accordion.addEventListener('click', () => {
             let parentElement = accordion.nextElementSibling;
@@ -43,19 +45,21 @@ openCategory.forEach(accordion => {
             parentElement.querySelectorAll('.category-container').forEach(element => {
                 element.classList.toggle('accordion-opened');
             });
-        })
-    }
+        });
+    };
 });
 
 closeCategory.forEach(category => {
     if (window.innerWidth >= 1024) {
         category.addEventListener('mouseleave', () => {
             category.querySelectorAll('.desktop-containers').forEach(categoryChild => {
-                categoryChild.classList.remove('accordion-opened')
-            })
-        })
-    }
-})
+                categoryChild.classList.remove('accordion-opened');
+            });
+            category.querySelector('span').classList.remove('icon-chevron-up');
+            category.querySelector('span').classList.add('icon-chevron-down');
+        });
+    };
+});
 
 openSubCategory.forEach(subcagetory => {
     console.log('click')
@@ -63,7 +67,7 @@ openSubCategory.forEach(subcagetory => {
         subcagetory.addEventListener('click', () => {
             subcagetory.nextElementSibling.classList.toggle('accordion-opened');
         });
-    }
+    };
 });
 
 
