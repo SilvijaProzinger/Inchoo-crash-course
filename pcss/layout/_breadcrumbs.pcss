@@ -1,6 +1,5 @@
 .breadcrumb__link {
     color: var( --link__color);
-    margin-right: pxtorem(6);
 
     &:hover {
         color: var(--link__hover__color);
@@ -23,4 +22,15 @@
 
 .breadcrumb__current__item {
     font-weight: 700;
+}
+
+.breadcrumb__link:after {
+    content: "";
+    background: url('../assets/img/icons/chevron-right.svg') center no-repeat;
+    background-size: 12px;
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    padding: pxtorem(1);
+    margin: pxtorem(6);
 }
