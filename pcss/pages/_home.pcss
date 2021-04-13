@@ -103,7 +103,6 @@
   &:hover {
     background-color: var(--secondary__color);
   }
-
 }
 
 .active {
@@ -124,7 +123,6 @@
     justify-items: center;
     grid-gap: pxtorem(21);
   }
-
 }
 
 .categories__title {
@@ -134,24 +132,7 @@
 .categories__list__item {
   position: relative;
   margin-bottom: pxtorem(21);
-}
 
-.categories__list__name {
-  position: absolute;
-  left: pxtorem(12);
-  bottom: 0;
-  color: var(--text__color__invert);
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
-  text-decoration: none;
-
-  &:visited {
-    color: var(--text__color__invert);
-  }
-}
-
-.categories__list__img {
-  position: relative;
-  
   &:after {
     content: '';
     position: absolute;
@@ -161,8 +142,30 @@
     height: 100%;
     display: inline-block; 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    opacity: 0.35;
+    opacity: 0.4;
   }
+}
+
+.categories__list__name {
+  position: absolute;
+  left: pxtorem(12);
+  bottom: 0;
+  color: var(--text__color__invert);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  z-index: 2;
+
+  &:visited {
+    color: var(--text__color__invert);
+  }
+}
+
+.categories__list__img {
+  display: block;
+}
+
+.categories__list__title {
+  margin-bottom: pxtorem(18);
 }
 
 .fade {
