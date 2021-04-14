@@ -1,9 +1,5 @@
-.search__hidden {
-    display: none;
-}
-
 .search__body {
-    z-index: 5;
+    z-index: 9;
     position: absolute;
     top:0;
     left: 0;
@@ -14,11 +10,24 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
 
     @media (--large) {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+.search__body-visible {
+    visibility: visible;
+    transform: translateY(10%);
+}
+
+.search__body-closed {
+    visibility: hidden;
+    transform: translateY(0);
 }
 
 .button--close-search {
