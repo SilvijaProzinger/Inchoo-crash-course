@@ -13,7 +13,7 @@ const closeFiltersButton = document.getElementById('clear-button');
 
 //check resolution to see if shopby filter should be opened or hidden for mobile view 
 const showOrHideSidebar = () => {
-    if (window.innerWidth >= 1024){
+    if (window.matchMedia("(min-width: 1024px)").matches){
         shopByNavigation.classList.add('layered-nav');
         shopByNavigation.classList.remove('layered-nav-mobile');
     } else {
@@ -86,13 +86,3 @@ closeFiltersButton.addEventListener('click', () => {
     document.getElementById('selected').style.display = 'none';
     document.querySelector('.selected__filter').innerHTML = '';
 })
-
-//hide the keyboard focus for when the user is not using keyboard 
-const handleTab = (e) => {
-    if (e.keyCode === 9) {
-        document.body.classList.add('user-is-tabbing');
-        window.removeEventListener('keydown', handleTab);
-    }
-}
-
-window.addEventListener('keydown', handleTab);
