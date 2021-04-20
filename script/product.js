@@ -25,7 +25,7 @@ const customizeDetails = () => {
     const getBottomHeight = document.querySelector('.details__content').offsetHeight;
     console.log(getBottomHeight)
 
-    if (window.innerWidth >= 1024){
+    if (window.matchMedia("(min-width: 1024px)").matches){
         detailsContainer.style.marginBottom = getBottomHeight + 100 +'px'
     };
 };
@@ -34,3 +34,23 @@ window.addEventListener("resize", customizeDetails);
 document.addEventListener('DOMContentLoaded', function () {
   customizeDetails()
 });
+
+//keep footer details open on desktop
+const openOrCloseDetails = () => {
+const details = document.querySelectorAll("details");
+
+if (window.matchMedia("(min-width: 765px)").matches){
+  details.forEach(detail => {
+    detail.setAttribute('open', true)
+  })
+} else {
+  details.forEach(detail => {
+    detail.removeAttribute('open')
+  })
+}
+}
+
+window.addEventListener("resize", openOrCloseDetails);
+document.addEventListener('DOMContentLoaded', function() {
+openOrCloseDetails()
+})

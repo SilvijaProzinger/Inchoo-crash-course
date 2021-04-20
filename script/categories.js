@@ -16,9 +16,11 @@ const showOrHideSidebar = () => {
     if (window.matchMedia("(min-width: 1024px)").matches){
         shopByNavigation.classList.add('layered-nav');
         shopByNavigation.classList.remove('layered-nav-mobile');
+        shopByNavigation.classList.remove('visualy-hidden');
     } else {
         shopByNavigation.classList.add('layered-nav-mobile');
         shopByNavigation.classList.remove('layered-nav');
+        shopByNavigation.classList.add('visualy-hidden');
     }
 };
 
@@ -51,12 +53,12 @@ gridButton.addEventListener('click', () => {
 //open or close shop by filters
 shopByButton.addEventListener('click', () => {
     shopByNavigation.classList.add('layered-nav-mobile');
-    shopByNavigation.style.display = 'block';
+    shopByNavigation.classList.remove('visualy-hidden');
 })
 
 closeShopByButton.addEventListener('click', () => {
     shopByNavigation.classList.remove('layered-nav-mobile');
-    shopByNavigation.style.display = 'none';
+    shopByNavigation.classList.add('visualy-hidden');
 })
 
 //apply selected filters to categories
@@ -86,3 +88,24 @@ closeFiltersButton.addEventListener('click', () => {
     document.getElementById('selected').style.display = 'none';
     document.querySelector('.selected__filter').innerHTML = '';
 })
+
+//keep footer details open on desktop
+const openOrCloseDetails = () => {
+const details = document.querySelector('summary__container').querySelectorAll("details");
+
+if (window.matchMedia("(min-width: 765px)").matches){
+    details.forEach(detail => {
+        detail.setAttribute('open', true)
+    })
+} else {
+    details.forEach(detail => {
+        detail.removeAttribute('open')
+    })
+}
+}
+
+window.addEventListener("resize", openOrCloseDetails);
+document.addEventListener('DOMContentLoaded', function() {
+openOrCloseDetails()
+})
+  

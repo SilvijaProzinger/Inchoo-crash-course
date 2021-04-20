@@ -51,7 +51,6 @@
 }
 
 .layered-nav-mobile {
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -68,7 +67,10 @@
 }
 
 .layered-nav__list {
-    width: 220px;
+    width: 90vw;
+    @media (--large) {
+        width: 220px;
+    }
 }
 
 .layered-nav__list__item {
@@ -83,11 +85,18 @@
 
 .layered-nav__list details {
     margin-bottom: pxtorem(30);
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: pxtorem(5);
+
+    @media (--large) {
+        border: none
+    }
 }
 
 .button--close-nav {
     color: var(--text__color);
-    float: right;
+    position: fixed;
+    left: 80vw;
 
     @media (--large) {
         display: none;
@@ -166,10 +175,7 @@ footer {
 }
 
 .button__grid, .button__list {
-    padding-left: pxtorem(15);
-    padding-right: pxtorem(15);
-    padding-top: pxtorem(15);
-    padding-bottom: pxtorem(15);
+    padding: pxtorem(15);
     
     &:active {
         background-color: var(--button-primary__background);
@@ -196,10 +202,7 @@ footer {
 }
 
 .pagination__link {
-    padding-left: pxtorem(17);
-    padding-right: pxtorem(17);
-    padding-top: pxtorem(9);
-    padding-bottom: pxtorem(9);
+    padding: pxtorem(9) pxtorem(17);
     margin-right: pxtorem(3);
     background-color: var(--neutral-10);
     color: var(--text__color);
@@ -275,9 +278,25 @@ footer {
     justify-content: center;
 }
 
+.icon-star {
+    color: var(--secondary__color);
+}
+
+.icon-star-half {
+    color: var(--secondary__color);
+    overflow: hidden;
+    width: 8px;
+    margin-right: pxtorem(3);
+}
+
+.icon-star-white {
+    color: var(--neutral-10);
+}
+
 .rating__number {
     color: var(--link__color);
     font-size: 12px;
+    padding-top: pxtorem(2);
 }
 
 .button__add-product {
