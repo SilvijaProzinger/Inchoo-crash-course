@@ -91,7 +91,7 @@ closeFiltersButton.addEventListener('click', () => {
 
 //keep footer details open on desktop
 const openOrCloseDetails = () => {
-const details = document.querySelector('summary__container').querySelectorAll("details");
+const details = document.querySelector('.summary__container').querySelectorAll("details");
 
 if (window.matchMedia("(min-width: 765px)").matches){
     details.forEach(detail => {

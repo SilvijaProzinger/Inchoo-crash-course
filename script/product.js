@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //keep footer details open on desktop
 const openOrCloseDetails = () => {
-const details = document.querySelectorAll("details");
+const details = document.querySelector('.summary__container').querySelectorAll("details");
 
 if (window.matchMedia("(min-width: 765px)").matches){
   details.forEach(detail => {
@@ -52,5 +52,5 @@ if (window.matchMedia("(min-width: 765px)").matches){
 
 window.addEventListener("resize", openOrCloseDetails);
 document.addEventListener('DOMContentLoaded', function() {
-openOrCloseDetails()
+  openOrCloseDetails()
 })

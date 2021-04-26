@@ -126,15 +126,15 @@
 .label-level-0 {
     cursor: pointer;
 
-    &:before {
+    &:after {
         @mixin icon-font-display "\e909";
         float: right;
-
-        &:active {
-            @mixin icon-font-display "\e90c";
-            float: right;
-        }
     }
+}
+
+details[open] .label-level-0:after {
+    @mixin icon-font-display "\e90c";
+    float: right;
 }
 
 .categories__content {

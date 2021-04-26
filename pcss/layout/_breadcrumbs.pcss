@@ -16,8 +16,12 @@
 
 .breadcrumb {
     display: flex;
-    margin-top: pxtorem(75);
     margin-bottom: pxtorem(23);
+    margin-top: pxtorem(35);
+
+    @media (--large) {
+        margin-top: pxtorem(75);
+    }
 }
 
 .breadcrumb__current__item {

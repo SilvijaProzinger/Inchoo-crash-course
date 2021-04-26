@@ -244,57 +244,44 @@
           <div class="product__description">
               <h1 tabindex="0" aria-label="inova pulsar frisbee" id="product-name">Inova Pulsar | Major League Ultimate Championship 175 Gram Flying Disc Ultrastar</h1>
               <p class="stock__number" tabindex="0" aria-label="in stock">In stock</p>
-              <p class="stock__number" tabindex="0" aria-label="SKU WH12" id="product-sku"><strong>SKU</strong> WH12</p>
+              <p class="stock__number" tabindex="0" aria-label="SKU WH12" id="product-sku">SKU <strong>WH12</strong></p>
               <a href="" class="review__link" tabindex="0" aria-label="review"><small>Be the first to review this product</small></a>
               <div class="price-box">
                   <span>As low as</span>
                   <span tabindex="0" aria-label="$21.99" id="product-price"><strong>$21.99</strong></span>
               </div>
               <form action="" id="product-form">
-                  <dl class="colors">
-                      <dt tabindex="0" aria-label="pick color">Color</dt>                
-                      <dd tabindex="0" aria-label="black color">
-                          <svg class="color__swatch" id="product-color">
-                              <title>Black</title>
-                              <rect style="fill:rgb(0, 0, 0);stroke-width:3;stroke:rgb(0,0,0)" />
-                          </svg>
-                      </dd>
-                      <dd tabindex="0" aria-label="blue color">
-                          <svg class="color__swatch" id="product-color">
-                              <title>Blue</title>
-                              <rect style="fill:#1857F7;stroke-width:3;stroke:#1857F7" />
-                          </svg>
-                      </dd>
-                      <dd tabindex="0" aria-label="magenta color">
-                          <svg class="color__swatch" id="product-color">
-                              <title>Magenta</title>
-                              <rect style="fill:#EF3DFF;stroke-width:3;stroke:#EF3DFF" />
-                          </svg>
-                      </dd>
-                  </dl>
-                  <div class="quantity__and__add">
-                      <fieldset class="item__fieldset">
-                          <legend>Item qty</legend>
-                          <label for="qty" aria-label="quantity" tabindex="0">Qty:</label>
-                          <input name="qty" type="number" value="1" id="product-qty" min="1">
-                      </fieldset> 
-                      <button id="add-to-cart" class="button button--primary button--add-to-cart" type="submit" tabindex="0" aria-label="add to cart">Add to Cart</button>    
-                  </div>
-                  <ul class="wishlist__compare">
-                      <li>
-                          <a tabindex="0" aria-label="add to wishlist" href="" title="Add to wishlist">
-                              <span class="icon-heart"></span> Add to Wishlist</a>
-                      </li>
-                      <li>
-                          <a tabindex="0" aria-label="add to compare" href="" title="Add to Compare">
-                              <span class="icon-bar-chart"></span> Add to Compare</a>
-                      </li>
-                  </ul>
+                <dl class="colors">
+                  <div>
+                    <dt tabindex="0" aria-label="pick color">Color</dt>  
+                  </div>   
+                  <div class="color__swatch" data="Black" style="background-color:#1e2024" data-hex="#1e2024" tabindex="0" aria-label="black color"></div>
+                  <div class="color__swatch" data="Orange" style="background-color:#f78f18" data-hex="#f78f18" tabindex="0" aria-label="orange color"></div>
+                  <div class="color__swatch" data="White" style="background-color:#ececec" data-hex="#ececec" tabindex="0" aria-label="orange color"></div>
+                </dl>
+                <div class="quantity__and__add">
+                    <fieldset class="item__fieldset">
+                        <legend>Item qty</legend>
+                        <label for="qty" aria-label="quantity" tabindex="0">Qty:</label>
+                        <input name="qty" type="number" value="1" id="product-qty" min="1">
+                    </fieldset> 
+                    <button id="add-to-cart" class="button button--primary button--add-to-cart" type="submit" tabindex="0" aria-label="add to cart">Add to Cart</button>    
+                </div>
+                <ul class="wishlist__compare">
+                    <li>
+                        <a tabindex="0" aria-label="add to wishlist" href="" title="Add to wishlist">
+                            <span class="icon-heart"></span> Add to Wishlist</a>
+                    </li>
+                    <li>
+                        <a tabindex="0" aria-label="add to compare" href="" title="Add to Compare">
+                            <span class="icon-bar-chart"></span> Add to Compare</a>
+                    </li>
+                </ul>
               </form>
           </div>
       </div> 
         <section class="product__details">
-            <details open class="product__details__detail">
+            <details open class="product__details__detail" open>
                 <summary class="summary__desktop__tab">
                     <h2 aria-labeledby="details" aria-controls="details" aria-expanded="true" tabindex="0">Details</h2>
                 </summary>

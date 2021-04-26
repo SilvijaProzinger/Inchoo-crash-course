@@ -129,7 +129,15 @@
     }
 }
 
-.product__details summary {
+.product__details__detail[open] summary:before {
+    @mixin icon-font-display "\e90c";
+
+    @media (--large) {
+        content: '';
+    }
+}
+
+.product__details__detail summary {
     
     &:before {
         @mixin icon-font-display "\e909";

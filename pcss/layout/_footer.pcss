@@ -6,17 +6,6 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-details[open] summary:after {
-   @mixin icon-font-display "\e90c";
-    float: right;
-    margin-top: pxtorem(12);
-    
-    @media (--medium) {
-      content: '';
-      pointer-events: none;
-    }
-}
-
 .footer {
   background-color: var(--pure-black);
   color: var(--text__color__invert);
@@ -86,6 +75,17 @@ details[open] summary:after {
 
   @media (--medium) {
     padding-bottom: 0;
+  }
+}
+
+.footer__details[open] summary:after {
+  @mixin icon-font-display "\e90c";
+  float: right;
+  margin-top: pxtorem(12);
+    
+  @media (--medium) {
+    content: '';
+    pointer-events: none;
   }
 }
 
