@@ -16,11 +16,11 @@ subscribeButton.addEventListener('click', event => {
 //slider
 let slideIndex = 1;
 const previousButton = document.getElementById('prev-button')
-const nextButton = document.getElementById('next-button')
-const dotButtons = document.querySelectorAll('#dot-control')
+  nextButton = document.getElementById('next-button')
+  dotButtons = document.querySelectorAll('#dot-control')
 
 const showSlides = n => {
-  let i;
+  let i
   const slides = document.getElementsByClassName("hero-slider-list__item")
   const dots = document.getElementsByClassName("dot")
 
@@ -37,21 +37,21 @@ const showSlides = n => {
   }
 
   for (i = 0; i < dots.length; i++) {
-	dots[i].className = dots[i].className.replace(" active", "");
+	dots[i].className = dots[i].className.replace(" active", "")
   }
 
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex-1].style.display = "block"
+  dots[slideIndex-1].className += " active"
 }
 
 showSlides(slideIndex);
 
 const plusSlides = n => {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex += n)
 }
 
 const currentSlide = n => {
-  showSlides(slideIndex = n);
+  showSlides(slideIndex = n)
 }
 
 previousButton.addEventListener('click', () => {
@@ -59,7 +59,7 @@ previousButton.addEventListener('click', () => {
 })
 
 nextButton.addEventListener('click', () => {
-	plusSlides(1);
+	plusSlides(1)
 })
 
 for (let i = 0; i < dotButtons.length; i++) {
@@ -84,7 +84,7 @@ const openOrCloseDetails = () => {
   }
 }
 
-window.addEventListener("resize", openOrCloseDetails);
+window.addEventListener("resize", openOrCloseDetails)
 document.addEventListener('DOMContentLoaded', function() {
   openOrCloseDetails()
 })

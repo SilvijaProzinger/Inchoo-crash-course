@@ -53,32 +53,12 @@ const handleProductOrder = (event) => {
     productJSON = JSON.stringify(productOne)
 
     createCartContent(productOne)
-};
+}
 
 addToCartButton.addEventListener('submit', handleProductOrder);
 
-//open and close the shopping cart
-openCart.addEventListener('click', () => {
-    cart.classList.remove('cart__closed')
-    cart.classList.add('cart__opened')
-
-    if (productJSON === undefined){
-        document.getElementById('if-empty').style.display = 'block'
-        document.getElementById('cart-content').style.display = 'none'
-    } else {
-        document.getElementById('if-empty').style.display = 'none'
-        document.getElementById('cart-content').style.display = 'block'
-    }
-})
-
-cart.addEventListener('click', (event) => {
-    if (event.target.className === "icon-x-circle"){
-        cart.classList.remove('cart__opened')
-        cart.classList.add('cart__closed')
-    } 
-})
-
 checkoutButton.addEventListener('click', () => {
     cart.classList.remove('cart__opened')
+    cart.classList.add('visualy-hidden')
     cart.classList.add('cart__closed')
 })

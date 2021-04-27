@@ -1,9 +1,9 @@
 const openMenuButton = document.getElementById('open-menu')
-const closeMenuButton = document.getElementById('close-menu')
-const menuBody = document.getElementById('menu-container')
-const openCategory = document.querySelectorAll('#open-category')
-const openSubCategory = document.querySelectorAll('#open-subcategory')
-const closeCategory= document.querySelectorAll('#category-item')
+    closeMenuButton = document.getElementById('close-menu')
+    menuBody = document.getElementById('menu-container')
+    openCategory = document.querySelectorAll('#open-category')
+    openSubCategory = document.querySelectorAll('#open-subcategory')
+    closeCategory= document.querySelectorAll('#category-item')
 
 openMenuButton.addEventListener('click', () => {
     menuBody.classList.toggle('visualy-hidden')
