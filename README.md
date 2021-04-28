@@ -1,4 +1,4 @@
-# Inchoo frontend crash course
+﻿# Inchoo frontend crash course
 
 This is a repository for Inchoo frontend crash course task, the Grabsbee webshop.
 
@@ -15,7 +15,6 @@ Mentors and design authors: Filip Svetličić and Mladen Ristić
 * Search form
 
 ## To improve in the future
-* Add animation to search dropdown and mobile menu dropdown
 * Save JSON file with selected product so that it persist in local storage and shows in cart on other pages as well
 * Add ability to add multiple products to cart
 * Make search form usable

@@ -2,6 +2,7 @@ const toggleProductDetails = (function(){
   const images = document.querySelectorAll('.product__img')
     details = document.querySelectorAll(".product__details__detail")
     detailsContainer = document.querySelector('.product__details')
+    mqlDesktop = window.matchMedia("(min-width: 1024px)")
   let featuredImage = document.getElementById('featured')
 
   //set clicked image as the one in the preview
@@ -24,12 +25,12 @@ const toggleProductDetails = (function(){
 
   const customizeDetails = () => {
       const getBottomHeight = document.querySelector('.details__content').offsetHeight;
-      console.log(getBottomHeight)
-
-      if (window.matchMedia("(min-width: 1024px)").matches){
+      if (mqlDesktop.matches){
           detailsContainer.style.marginBottom = getBottomHeight + 100 +'px'
       }
   }
+
+  mqlDesktop.addEventListener("change", customizeDetails)
 
   return {
     customizeDetails: customizeDetails

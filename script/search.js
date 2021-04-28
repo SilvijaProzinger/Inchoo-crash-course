@@ -19,10 +19,6 @@ const toggleSearch = (function(){
     
     openSearchButton.addEventListener('click', toggleSearchVisibility)
     closeSearchForm.addEventListener('click', toggleSearchVisibility)
-
-    return {
-        toggleSearchVisibility: toggleSearchVisibility
-    }
 })()
 
 

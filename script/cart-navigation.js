@@ -31,9 +31,5 @@ const toggleCart = (function(){
             document.getElementById('cart-content').style.display = 'block'
         }
     })
-
-    return {
-        toggleCartVisibility: toggleCartVisibility
-    }
 })()
 
