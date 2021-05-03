@@ -1,5 +1,5 @@
 const homeSlider = (function(){
-  let slideIndex = 1;
+  let slideIndex = 1
   const previousButton = document.getElementById('prev-button')
     nextButton = document.getElementById('next-button')
     dotButtons = document.querySelectorAll('#dot-control')
@@ -7,7 +7,7 @@ const homeSlider = (function(){
   const showSlides = n => {
     let i
     const slides = document.getElementsByClassName("hero-slider-list__item")
-    const dots = document.getElementsByClassName("dot")
+      dots = document.getElementsByClassName("dot")
 
     if (n > slides.length) {
       slideIndex = 1
@@ -50,7 +50,6 @@ const homeSlider = (function(){
   for (let i = 0; i < dotButtons.length; i++) {
     dotButtons[i].addEventListener('click', () => {
       currentSlide(i+1)
-      console.log(i)
     })
   }
 

@@ -73,15 +73,15 @@ const toggleCategories = (function(){
                 selectedFilter = ''
                 document.getElementById('selected').style.display = 'none'
             }
-            console.log(selectedFilter)
 
+            document.querySelector('.filter__section').classList.remove('visualy-hidden') 
             document.getElementById('selected').style.display = 'block'
             document.querySelector('.selected__filter').innerHTML = selectedFilter
-        })
+        }) 
     })
 
     closeFiltersButton.addEventListener('click', () => {
-        document.getElementById('selected').style.display = 'none'
+        document.querySelector('.filter__section').classList.add('visualy-hidden')      
         document.querySelector('.selected__filter').innerHTML = ''
     })
 
