@@ -68,54 +68,46 @@
             </button>
             <div id="if-empty">
               <strong>You have no items in your shopping cart</strong>
-            </div>           
+            </div>              
             <div id="cart-content">
               <h2>
-                <p class="number__of__items" aria-label="number of items in cart" tabindex="0">XY item in Cart</p>
-              </h2>
+                <p class="number__of__items" aria-label="number of items in cart" tabindex="0">1 item in Cart</p>
+              </h2>  
               <ol>
                 <li class="cart-item">
                   <div>
-                    <img src="" alt="Item name 1" />
-                  </div>
+                    <img src="./assets/img/products/product-1.svg" alt="Item name"/>
+                  </div> 
                   <div class="cart-item-details">
                     <h3>
-                      <a href="" tabindex="0" aria-label="item name" class="cart-item-name"></a>
-                    </h3>
+                      <p href="" tabindex="0" aria-label="item name" class="cart-item-name"></p>
+                    </h3> 
                     <dl>
                       <dt tabindex="0"><strong>Color:</strong></dt>
                       <dd tabindex="0" id="color-val"></dd>
                       <dt tabindex="0" class="price-label"><strong>Price:</strong></dt>
                       <dd tabindex="0" id="price-val"></dd>
-                      <dd tabindex="0"><strong>Qty:</strong></dd>                     
-                      <dd>
-                        <form>
-                          <fieldset>
-                            <legend>Items qty form</legend>
-                            <label for="qty" tabindex="0" aria-label="items in cart">Items in Cart</label>
-                            <input name="qty" type="number" tabindex="0" aria-label="number of items in cart" id="qty-val"/>
-                          </fieldset>
-                        </form>
-                      </dd>
+                      <dd tabindex="0"><strong>Qty:</strong></dd>                       
+                      <dd tabindex="0" id="qty-val"></dd>
                     </dl>
                   </div>
                 </li>
-              </ol>
+              </ol> 
               <table>
                 <caption tabindex="0" aria-label="your cart total">Your Cart Totals table</caption>
                 <tbody>
                   <tr class="subtotal">
                     <th tabindex="0" aria-label="subtotal">Cart subtotal</th>
-                    <td tabindex="0" aria-label="total price" class="total-price">$$</td>
+                    <td tabindex="0" aria-label="total price" class="total-price" id="total-val"></td>
                   </tr>
                 </tbody>
-              </table>
+              </table> 
               <div class="edit-and-proceed">
                 <a href="" title="Back to Cart page" class="edit-link edit-item" tabindex="0" aria-label="view and edit cart">View and edit cart</a>
                 <button id="checkout-button" class="button button--primary edit-item" tabindex="0" aria-label="proceed to checkout">Proceed to checkout</button>
               </div>
-            </div>         
-          </section>        
+            </div>             
+          </section>         
         </li>
         <li class="header__drawers-list__item">
           <button id="open-menu" class="button--no-styles header__buttons visualy-hidden--desktop" tabindex="0" aria-label="open navigation">
@@ -553,12 +545,10 @@
         >Copyright &reg; 2021 Grabsbee</small>
     </div>
   </footer>
-  <script src="./script/script.js"></script>
   <script src="./script/categories.js"></script>
-  <!--<script src="./script/cart.js"></script>-->
-  <!--<script src="./script/cart-navigation.js"></script>-->
-  <!--<script src="./script/menu.js"></script>-->
-  <!--<script src="./script/search.js"></script>-->
-  <!--<script src="./script/footer.js"></script>-->
+  <script src="./script/cart-navigation.js"></script>
+  <script src="./script/menu.js"></script>
+  <script src="./script/search.js"></script>
+  <script src="./script/footer.js"></script>
 </body>
 </html>
